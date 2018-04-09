@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en" manifest="cache.appcache">
+<head>
+    <meta charset="UTF-8">
+    <title>NYSL Game Info</title>
+    <!-- BOOTSTRAP: this CDN(Contend Delivery Network) is the latest compiled and minified CSS; CDN used when you don't download Bootstrap -->   
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <!-- BOOTSTRAP: the following is for MOBILE: ensure proper rendering and touch-zooming -->
+<!--    <meta name="viewport" content="width=device-width, initial-scale=1"> ITS LINKED BELOW-->
+    
+<!--  FOLLOWING: WEB APPLICATION ADDITIONS, FROM WEBSITE https://www.creativepulse.gr/en/blog/2014/hello-world-web-app-for-android-and-ios  -->
+    <!-- the second and third following links don't work alone, they need the first one too    -->
+    <link rel="shortcut icon"  href="nysl_logo.png">
+    <link rel="shortcut icon" sizes="128x128" href="nysl_logo.png">
+    <link rel="shortcut icon" sizes="196x196" href="nysl_logo.png">
+    
+    <link rel="apple-touch-icon" href="nysl_logo.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="nysl_logo.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="nysl_logo.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="nysl_logo.png">
+
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="mobile-web-app-capable" content="yes">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimal-ui">
+
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<!-- END OF THE ADDITIONS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div class="container-fluid" id="mainContainer">
+    <div class="landscape_title row" id="titleContainer">
+        <div class=" col-xs-3 col-md-4"> <img id="logo_small" src="images/nysl_logo.png" alt="NYSL_logo"></div>
+        <div class=" col-xs-6 col-md-4">
+            <div class="row" id="titleRow">NYSL</div>
+            <div class="row" id="infoRow">Game informations</div>
+        </div>
+        <div class=" col-xs-3 col-md-4">
+        </div>    
+    </div>      
+      
+    <div class=" container row buttonContainer_landscape" id="buttonContainer"> <!-- not sure whether to make it a row -->
+        <input type="button" class="btn btn-info button landscape_button " id="when" value="When" name="when"  >
+        <input type="button" class="btn btn-info button landscape_button" id="teams" value="Teams" name="teams"  >
+        <input type="button" class="btn btn-info button landscape_button" id="locations" value="Locations" name="locations"  >
+      <!-- when? menu-->
+        <div class="menu collapse menu_landscape " id="when_menu" >
+            <input class="radio_input"  type="radio" name="when" value="today">Today <br>
+            <input class="radio_input" type="radio" name="when" value="september">September <br>
+            <input class="radio_input" type="radio" name="when" value="october">October <br>
+            <input class="radio_input" type="radio" name="when" value="november">November <br>
+        </div>
+     <!--   teams menu    -->
+        <div class="menu collapse menu_landscape" id="teams_menu">
+            <input class="radio_input" type="radio" name="team" value="u1">U1 <br>
+            <input class="radio_input" type="radio" name="team" value="u2">U2 <br>
+            <input class="radio_input" type="radio" name="team" value="u3">U3 <br>
+            <input class="radio_input" type="radio" name="team" value="u4">U4 <br>
+            <input class="radio_input" type="radio" name="team" value="u5">U5 <br>
+            <input class="radio_input" type="radio" name="team" value="u6">U6 <br>
+         
+        </div>
+        <div class="menu collapse menu_landscape" id="locations_menu">
+            <input class="radio_input" type="radio" name="location" value="ajk">AJ Katzenmaier <br>
+            <input class="radio_input" type="radio" name="location" value="gb">Greenbay <br>
+            <input class="radio_input" type="radio" name="location" value="hay">HA Yeager <br>
+            <input class="radio_input" type="radio" name="location" value="mph">MP Hart <br>
+            <input class="radio_input" type="radio" name="location" value="n">North <br>
+            <input class="radio_input" type="radio" name="location" value="s">South <br>
+            
+        </div>
+    </div>
+   
+     
+  
+    <div class="container" id="indexContainer">
+  
+     
+
+        <!--  starting page layout  -->
+<!--        <img id="big_logo" src="images/nysl_logo.png" alt="nysl_log">-->
+    </div>
+    <div class="container" id="tableContainer">
+                              <table class="tableGames">
+                      <thead>
+                          <tr>
+                              <th scope="col">Day</th>
+<!--                              <th scope="col">SEPTEMBER</th>-->
+                              <th scope="col">Teams</th>
+                              <th scope="col">Location</th>
+                              <th scope="col">Times</th>
+                          </tr>
+                      </thead>
+                      <tbody>
+                          <tr>
+                              <td rowspan="2">9/01</td>
+                              <td>U1 vs U4</td>
+                              <td>AJ Katzenmaier</td>
+                              <td>9:30 a.m.</td>
+                          </tr>
+                          <tr>
+                         
+                              <td>U3 vs U2</td>
+                              <td>Greenbay</td>
+                              <td>1:00 p.m.</td>
+                          </tr>
+                          <tr>
+                              <td rowspan="2">9/08</td>
+                              <td>U5 vs U6</td>
+                              <td>Howard A Yeager</td>
+                              <td>9:30 a.m.</td>
+                          </tr>
+                          <tr>
+                              
+                              <td>U6 vs U1</td>
+                              <td>Marjorie P Hart</td>
+                              <td>1:00 p.m.</td>
+                          </tr>
+                          <tr>
+                              <td rowspan="2">9/15</td>
+                              <td>U2 vs U4</td>
+                              <td>North</td>
+                              <td>9:30 a.m.</td>
+                          </tr>
+                          <tr>
+                              
+                              <td>U3 vs U5</td>
+                              <td>AJ Katzenmaier</td>
+                              <td>1:00 p.m.</td>
+                          </tr>
+                          <tr>
+                              <td rowspan="2">9/22</td>
+                              <td>U2 vs U6</td>
+                              <td>South</td>
+                              <td>9:30 a.m.</td>
+                          </tr>
+                          <tr>
+                              
+                              <td>U2 vs U6</td>
+                              <td>Howard A Yaeger</td>
+                              <td>1:00 p.m.</td>
+                          </tr>
+                          <tr>
+                              <td>9/29</td>
+                              <td>U4 vs U5</td>
+                              <td>Greenbay</td>
+                              <td>9:30 a.m.</td>
+                          </tr>
+                    
+              <!-- AT THIS POINT I WOULD BUILD ANOTHER TABLE WITH THE SAME CHARACTERISTICS AS THE PREVIOUS; I DID, IT DOESNT WORK,
+                         THE POSITIONS ARE NOT MATCHING!!! -->
+                          <tr>
+                              <th scope="col">OCTOBER</th>
+                              <th scope="col">Teams</th>
+                              <th scope="col">Location</th>
+                              <th scope="col">Times</th>
+                          </tr>
+
+                          
+                          <tr>
+                              <td rowspan="2">10/06</td>
+                              <td>U2 vs U5</td>
+                              <td>Marjorie P Hart</td>
+                              <td>9:30 a.m.</td>
+                          </tr>
+                          <tr>
+                              
+                              <td>U1 vs U6</td>
+                              <td>South</td>
+                              <td>1:00 p.m.</td>
+                          </tr>
+                          <tr>
+                              <td rowspan="2">10/13</td>
+                              <td>U3 vs U4</td>
+                              <td>Howard A Yeager</td>
+                              <td>9:30 a.m.</td>
+                          </tr>
+                          <tr>
+                              
+                              <td>U5 vs U1</td>
+                              <td>Greenbay</td>
+                              <td>1:00 p.m.</td>
+                          </tr>
+                          <tr>
+                              <td rowspan="2">10/20</td>
+                              <td>U6 vs U3</td>
+                              <td>North</td>
+                              <td>9:30 a.m.</td>
+                          </tr>
+                          <tr>
+                              
+                              <td>U2 vs U4</td>
+                              <td>Marjorie P Hart</td>
+                              <td>1:00 p.m.</td>
+                          </tr>
+                          <tr>
+                              <td rowspan="2">10/27</td>
+                              <td>U3 vs U1</td>
+                              <td>AJ Katzenmaier</td>
+                              <td>9:30 a.m.</td>
+                          </tr>
+                          <tr>
+                              
+                              <td>U5 vs U6</td>
+                              <td>Howard A Yaeger</td>
+                              <td>1:00 p.m.</td>
+                          </tr>
+                      </tbody>
+                    </table>
+    </div>
+
+    <div class="container" id="footer">
+       <input type="image" class="icon" src="images/home_icon.png" alt="home_icon">
+       <input type="image" class="icon" src="images/calendar_icon.png" alt="calendar_icon">
+       <input type="image" class="icon" src="images/phone_icon.png" alt="phone_icon">
+       <input type="image" class="icon" src="images/whatsapp_icon.jpg" alt="whatsapp_icon">
+       <input type="image" class="icon" src="images/email_icon" alt="email_icon">
+    </div>
+</div>
+   
+   
+   
+   
+    <!-- BOOTSTRAP jQuery Library-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <!--    -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <!--  bootstrap-->
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.js"
+      integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+      crossorigin="anonymous"></script>
+    <!-- Following: Vue link to load Vue library DEVELOPMENT MODE!!!  -->
+    <script src="https://unpkg.com/vue/dist/vue.js"></script>
+    <!-- FOLLOWING: PRODUCTION VERSION OF VUE, for when the website is deployed -->
+    <!--<script src="https://cdn.jsdelivr.net/npm/vue"></script>-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>   
+    <script src="js/main.js" ></script>
+</body>
+</html>
