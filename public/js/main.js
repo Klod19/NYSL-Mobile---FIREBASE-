@@ -6,9 +6,11 @@
 $(document).ready(function(){
    var allTeams = [];
    var allLocations = [];
+   var allGames =[];
     $.getJSON("https://api.myjson.com/bins/14hrrz", function(data){
         allTeams = data.Teams
         allLocations = data.Locations
+        allGames = data.Matches
         console.log(allTeams);
         console.log(allLocations);
         showTeamsList(allTeams);
@@ -65,6 +67,7 @@ function activateMenu(){
 function showContent(array){
             $(".radio_input").on("click", function(e){
                 var tool = e.target.value
+                var id = e.target.id
                 console.log("THIS IS the TOOL: " + tool)
                 $(".menu").hide(1000);
                 $("#indexContainer").hide();
@@ -80,11 +83,14 @@ function showContent(array){
 
 
 
-function makeTable() {
+function makeTable(id) {
         $("#tableContainer").show();
     /* I HAVE TO MANUALLY SHOW/HIDE EVERY CHILDREN OF bigMapBox, WHY?? HIDING THE PARENT SHOULD HIDE THEM TOO!!!*/
         $("#mapContainer").hide();
-        $("#mapAddress").hide()
+        $("#mapAddress").hide();
+        $(array)each(function(object){
+            if ( id == object.key ) /* LOOK INTO THIS!!!*/ 
+        })
 }
 
 function showTeamsList(team_list){
