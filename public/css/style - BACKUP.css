@@ -1,0 +1,280 @@
+body{
+    font-size:100%;
+    width:100vw;
+}
+
+.container-fluid{
+    padding-left:0px !important;
+}
+
+#mainContainer{
+    min-width:100vw !important;
+}
+/*THE PAGE TITLE NEEDS TO BE OPTMIZED ACCORDING TO THE SCREEN; MEDIA QUERY?*/
+#titleContainer{
+    height:11vh;
+    background-color:firebrick;
+    color:white;
+    width:100vw;
+    font-size:3em;
+    text-align: center;
+
+}
+
+/*
+h3{
+    font-size:3em !important;
+}
+*/
+
+.buttonContainer{
+    position:relative;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    width:100vw;
+    height: 9vh;
+    background-color:aqua;
+    border: 1px solid black;
+/*    font-size:110%;*/
+    font-size:2em;
+    padding:0px !important;
+}
+
+.buttonContainer option{
+    font-size:12px !important;
+    width:12px !important;
+    
+}
+
+/*
+
+.button{
+    height: 6vh;
+    margin-right:1vw;
+    margin-bottom: 1vh;
+    font-size:1em;
+    border:2px solid green
+}
+*/
+
+.row{
+    width:100vw;
+    margin:0px !important;
+}
+
+.col-xs-6{
+    width:50vw;
+    height:11vh;
+    padding-left:0px;
+    padding-right:0px;
+}
+
+.col-xs-3{
+    width:25vw;
+    height:11vh;
+    padding-left:0px;
+    padding-right:0px;
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+/*
+    padding-top:2px !important;
+    padding-bottom:2px !important;
+*/
+
+}
+
+
+#logo_small{
+/*
+    height:9vh;
+    width:16vw;
+*/
+    max-width:65%;
+}
+
+#titleRow{
+    width:100%;
+    height:7vh;
+/*    font-size:55% !important;*/
+    margin-bottom:5px;
+}
+
+#infoRow{
+    width:100%;
+    height:4vh;
+    font-size:55% !important;
+    margin-bottom:5px;
+}
+
+#calendar_icon{/*adjust its position with MEDIA QUERY */
+    /*margin-top:1vh; this doesn't look correct on different mobile screen; MEDIA QUERY will probably fix it*/
+    height:9vh;
+    width:15vw;
+}
+
+
+
+/*
+#when{
+    width:28vw    
+}
+*/
+
+#location{
+    width:32vw;
+}
+
+#indexContainer{
+    width:100vw;
+    height: 71vh;
+    display:flex;
+    flex-direction: column;
+/*    justify-content: center;*/
+    align-items: center;
+    background-image: url("https://png.pngtree.com/thumb_back/fw800/back_pic/03/94/32/0557e8e8fcbf544.jpg");
+/*    display:none;*/
+}
+
+#tableContainer{
+    width:100vw;
+    height: 71vh;
+    color:white;
+    background-image: url("https://png.pngtree.com/thumb_back/fw800/back_pic/03/94/32/0557e8e8fcbf544.jpg");
+    display:none;
+    font-size:2em;
+    overflow:scroll;
+}
+
+#big_logo{
+    width:90%
+}
+
+.menu{
+    position:absolute;
+    top:8.5vh;
+/*    align-self:flex-start;*/
+    width:100vw;
+/*    height: 71vh;*/
+    background-color:rgba(128,128,128, 1.0);
+    color:white;
+    font-size:2em;
+    z-index:100;
+    padding-left:10px;
+}
+
+
+
+/*
+#when_menu{
+  display:none;
+}
+*/
+
+
+#footer{
+    width:100vw;
+    height:10vh;
+    background-color: gold;
+    display:flex;
+    justify-content:space-between;
+    align-items: center;
+}
+
+.icon{
+    width:8vw;
+    height:7vh;
+}
+
+input{
+/*    margin:0 !important;*/
+    margin-right: 5px !important
+}
+
+table{
+    font-size:80%;
+    margin-bottom: 10px;
+}
+
+td{
+    border:2px solid white;
+}
+
+td:first-child { width: 1% }
+
+.mapContainer{
+    display:none;
+/*    display: flex;*/
+    align-items: center;
+    justify-content: center;
+    margin:0 !important;
+    padding:0 !important;
+    width:100vw;
+    height:71vh !important;
+}
+
+.map{
+    width:100vw;
+    height: 71vh;
+}
+
+
+/* MEDIA QUERY EXPERIMENT*/
+@media  screen  and (orientation: portrait){
+        .buttonContainer{
+        position:relative;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+        width:100vw;
+        height: 9vh;
+        background-color:aqua;
+        border: 1px solid black;
+    /*    font-size:110%;*/
+        font-size:2em;
+        padding:0px !important;
+    }
+
+    .buttonContainer option{
+        font-size:12px !important;
+        width:12px !important;
+
+    }
+
+}
+
+
+@media only screen  and  (min-device-width: 320px) and (max-device-width: 812px) and (orientation: landscape) {
+    
+    .buttonContainer_landscape{
+    position:absolute;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    width:20vw;
+    height: 100vh;
+    background-color:aqua;
+    border: 1px solid black;
+/*    font-size:110%;*/
+    font-size:2em;
+    padding:0px !important;
+    }
+    
+    .menu_landscape{
+         font-size:1em
+    }
+    .landscape_title {
+         display: none;
+     }
+
+    .landscape_button{
+/*         width:17vw;*/
+         font-size:1em;
+    }
+}

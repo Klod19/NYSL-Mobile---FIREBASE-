@@ -1,3 +1,11 @@
+html{
+    max-height: 100vh;
+    max-width:100vw;
+/*    overflow-y: hidden;*/
+
+}
+
+
 body{
     font-size:100%;
     width:100vw;
@@ -9,17 +17,11 @@ body{
 
 #mainContainer{
     min-width:100vw !important;
+    height: 100vh !important;
+    background-image: url(https://png.pngtree.com/thumb_back/fw800/back_pic/03/94/32/0557e8e8fcbf544.jpg);
 }
-/*THE PAGE TITLE NEEDS TO BE OPTMIZED ACCORDING TO THE SCREEN; MEDIA QUERY?*/
-#titleContainer{
-    height:11vh;
-    background-color:firebrick;
-    color:white;
-    width:100vw;
-    font-size:3em;
-    text-align: center;
 
-}
+/*THE PAGE TITLE NEEDS TO BE OPTMIZED ACCORDING TO THE SCREEN; MEDIA QUERY?*/
 
 /*
 h3{
@@ -27,29 +29,18 @@ h3{
 }
 */
 
-#buttonContainer{
-    position:relative;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: center;
-    width:100vw;
-    height: 9vh;
-    background-color:aqua;
-    border: 1px solid black;
-/*    font-size:110%;*/
-    font-size:2em;
-    padding:0px !important;
+#bigMapBox{
+    display:none;
 }
 
-#buttonContainer option{
-    font-size:12px !important;
-    width:12px !important;
-    
+#mapAddress{
+    display:none;
 }
 
+#mapContainer{
+    display:none;
+}
 /*
-
 .button{
     height: 6vh;
     margin-right:1vw;
@@ -88,7 +79,7 @@ h3{
 }
 
 
-#logo_small{
+.logo_small{
 /*
     height:9vh;
     width:16vw;
@@ -128,18 +119,18 @@ h3{
     width:32vw;
 }
 
-#indexContainer{
+.indexContainer{
     width:100vw;
     height: 71vh;
     display:flex;
     flex-direction: column;
 /*    justify-content: center;*/
     align-items: center;
-    background-image: url("https://png.pngtree.com/thumb_back/fw800/back_pic/03/94/32/0557e8e8fcbf544.jpg")
+    background-image: url("https://png.pngtree.com/thumb_back/fw800/back_pic/03/94/32/0557e8e8fcbf544.jpg");
 /*    display:none;*/
 }
 
-#tableContainer{
+.tableContainer{
     width:100vw;
     height: 71vh;
     color:white;
@@ -156,6 +147,7 @@ h3{
 .menu{
     position:absolute;
     top:8.5vh;
+    left:0px;
 /*    align-self:flex-start;*/
     width:100vw;
 /*    height: 71vh;*/
@@ -164,9 +156,13 @@ h3{
     font-size:2em;
     z-index:100;
     padding-left:10px;
+
 }
 
-
+.team_logo{
+    border-radius: 50%;
+    width:20vw;
+}
 
 /*
 #when_menu{
@@ -175,7 +171,7 @@ h3{
 */
 
 
-#footer{
+.footer{
     width:100vw;
     height:10vh;
     background-color: gold;
@@ -190,7 +186,8 @@ h3{
 }
 
 input{
-    margin:0 !important;
+/*    margin:0 !important;*/
+    margin-right: 5px !important
 }
 
 table{
@@ -200,23 +197,345 @@ table{
 
 td{
     border:2px solid white;
+    width:100px !important
 }
 
 td:first-child { width: 1% }
 
+
+}
+/* TEAM GRID CLASSES:*/
+.teamGrid{
+    width:44vw;
+}
+
+.logo_col{
+    width:15vw;
+    margin-right:0px !important
+}
+
+.words_col{
+    width:29vw;
+}
+
+.team_name{
+    font-size: 85% !important;
+}
+
+.team_motto{
+    font-size:65% !important
+}
+
+
 /* MEDIA QUERY EXPERIMENT*/
-@media screen and (orientation: landscape) {
+/*PORTRAIT, ALL MODELS*/
+@media  screen  and  (min-device-width: 320px) and (max-device-width: 414px) and (orientation: portrait){
+    .titleContainer{
+        height:11vh;
+        background-color:firebrick;
+        color:white;
+        width:100vw;
+        font-size:3em;
+        text-align: center;
+
+    }
+    
+    .logo_small{
+        /*
+            height:9vh;
+            width:16vw;
+        */
+        max-width:65%;
+    }
+    .logo_small_landscape{
+        display:none;
+    }
+    
+    .buttonContainer{
+        position:relative;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+        width:100vw;
+        height: 9vh;
+        background-color:rgba(128,128,128,0.5);
+        border: 1px solid black;
+    /*    font-size:110%;*/
+        font-size:2em;
+        padding:0px !important;
+    }
+
+    .buttonContainer option{
+        font-size:12px !important;
+        width:12px !important;
+
+    }
+    .indexContainer{
+        width:100vw;
+        height: 71vh;
+        display:flex;
+        flex-direction: column;
+    /*    justify-content: center;*/
+        align-items: center;
+        background-image: url("https://png.pngtree.com/thumb_back/fw800/back_pic/03/94/32/0557e8e8fcbf544.jpg");
+    /*    display:none;*/
+    }
+    
+    .mapAddress{
+        width:100vw;
+        height:12vw;
+        background-color:rgba(128,128,128, 0.5);
+        color:white;
+        text-align: center;
+        font-size:160%;
+    }
+    
+    .mapContainer{
+/*        display:none;*/
+    /*    display: flex;*/
+        align-items: center;
+        justify-content: center;
+        margin:0 !important;
+        padding:0 !important;
+        width:100vw;
+        height:71vh !important;
+    }
+
+    .map{
+        width:100vw;
+        height: 71vh;
+        border:0;
+        }
+
+}
+
+/*iphone 5*/
+@media only screen  and  (min-device-width: 320px) and (max-device-width: 568px) and (orientation: landscape){
+    /*  DIFFERENCES !!!      */
+    .landscape_button{
+        width:11vw !important;
+        margin-top:10px !important;
+        padding:0px !important
+    }
+    /*  SAME AS THE OTHERS!!!  */
+    .buttonContainer_landscape{
+        position:absolute;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        width:13vw;
+        height: 100vh;
+        background-color:rgba(128,128,128,0.5);
+        border: 1px solid black;
+        /*    font-size:110%;*/
+        font-size:150%;
+        padding:0px !important;
+    }
+
     .menu_landscape{
-         font-size:2em
+         font-size:1em
     }
     .landscape_title {
          display: none;
      }
-    #buttonContainer{
-        height: 15vh;
+
+/*
+    .landscape_button{
+             width:17vw;
+         font-size:1em;
+    }
+*/
+    .indexContainer_landscape{
+        /*    width:100vw;*/
+        height: 100vh;
+        display:flex;
+        flex-direction: column;
+        /*    justify-content: center;*/
+        align-items: center;
+        background-image: url("https://png.pngtree.com/thumb_back/fw800/back_pic/03/94/32/0557e8e8fcbf544.jpg");
+        /*    display:none;*/
+    }
+}
+
+    
+    
+/* iphone 6/similar and higher*/
+@media only screen  and  (min-device-width: 640px) and (max-device-width: 823px) and (orientation: landscape) {
+    
+    .buttonContainer_landscape{
+        position:absolute;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        width:13vw;
+        min-height: 100vh !important;
+        background-color:rgba(128,128,128,0.5);
+        border: 1px solid black;
+    /*    font-size:110%;*/
+        font-size:150%;
+        padding:0px !important;
+
     }
     .landscape_button{
-         width:25vw;
-         font-size:2em;
+        width:11vw !important;
+        margin-top:10px !important
     }
+    
+    .logo_small_landscape{
+         max-width:90%;
+         position:absolute;
+         top:10px;
+    }
+    
+    .menu_landscape{
+         font-size:2em;
+         left:13vw;
+         top:0px;
+         
+
+    }
+    
+    .teams_menu_landscape{
+         font-size:2em;
+         left:13vw;
+         top:0px;
+         width:45vw;
+         height :100vw;
+         overflow:scroll !important;
+
+
+    }
+    
+
+    #flexTeamsContainer{
+        display:flex;
+        flex-direction: column;
+    }
+    
+    .team_logo_landscape{
+        width:10vw;
+    }
+    
+    .landscape_title {
+         display: none;
+     }
+
+/*
+    .landscape_button{
+         width:17vw;
+         font-size:1em;
+    }
+*/
+    .indexContainer_landscape{
+    /*    width:87vw;*/
+        height: 100vh !important;
+        overflow: hidden;
+    /*
+        padding:0px !important;
+        margin: 0px !important;
+    */
+        display:flex;
+        flex-direction: column;
+    /*    justify-content: center;*/
+        align-items: center;
+        background-image: url("https://png.pngtree.com/thumb_back/fw800/back_pic/03/94/32/0557e8e8fcbf544.jpg");
+    /*    display:none;*/
+   
+    }
+ 
+    .tableContainer_landscape{
+        height: 100vh;
+        margin-left:13vw;
+        color:white;
+        background-image: url("https://png.pngtree.com/thumb_back/fw800/back_pic/03/94/32/0557e8e8fcbf544.jpg");
+        display:none;
+        font-size:2em;
+/*        overflow:scroll;*/
+    }
+    .flexContainer{
+        width:87vw;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .mapAddress_landscape{
+        margin-left: 13vw;
+        width:87vw;
+        height:10vh;
+        background-color: rgba(128,128,128,0.5);
+        color:white;
+        text-align: center;
+        font-size:185%;
+        padding-top:5px;
+    }
+    .mapContainer_landscape{
+
+    /*    display: flex;*/
+        align-items: center;
+        justify-content: center;
+        margin:0 !important;
+        padding:0 !important;
+        width:87vw;
+        height:90vh !important;
+    }
+    .map_landscape{
+        margin-left:13vw;
+        width:87vw !important;
+        height:90vh !important;
+        border:0;
+    }
+    
+    .landscape_footer{
+        display:none;
+    }
+    
+    
+.teamGrid{
+    width:44vw;
+}
+
+.logo_col{
+    width:15vw;
+    margin-right:0px !important
+}
+
+.words_col{
+    width:29vw;
+}
+
+.team_name{
+    font-size: 85% !important;
+}
+
+.team_motto{
+    font-size:65% !important
+}
+  
+    
+    
+    
+/*for iphone X; some features corrected (like the logo position*/
+
+/* it doesn't work !
+ 
+ @media only screen  and (min-device-width: 375px)  and (max-device-width: 812px)  and (-webkit-min-device-pixel-ratio: 3) and (orientation: landscape){
+        .logo_small_landscape{
+             max-width:95%;
+             position:absolute;
+             top:200px;
+        }
+}
+*/
+  
+    
+    
+       
+
+    
 }

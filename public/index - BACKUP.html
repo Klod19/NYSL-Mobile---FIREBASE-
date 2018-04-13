@@ -48,10 +48,10 @@
         <input type="button" class="btn btn-info button landscape_button" id="locations" value="where" name="locations"  >
       <!-- when? menu-->
         <div class="menu collapse menu_landscape " id="when_menu" >
-            <input class="radio_input"  type="radio" name="when" value="today" id="today">Today <br>
-            <input class="radio_input" type="radio" name="when" value="september" id="september">September <br>
-            <input class="radio_input" type="radio" name="when" value="october" id="october">October <br>
-            <input class="radio_input" type="radio" name="when" value="november" id="november">November <br>
+            <input class="radio_input"  type="radio" name="when" value="today">Today <br>
+            <input class="radio_input" type="radio" name="when" value="september">September <br>
+            <input class="radio_input" type="radio" name="when" value="october">October <br>
+            <input class="radio_input" type="radio" name="when" value="november">November <br>
         </div>
      <!--   teams menu    -->
         <div class="container menu  teams_menu_landscape collapse" id="teams_menu">
@@ -68,23 +68,12 @@
         </div>
          
         <div class="menu collapse menu_landscape" id="locations_menu">
-<!--           THE FOLLOWING WONT WORK, NOT SHOWN AS TABLE!!!!-->
-<!--
-            <table class="table table-striped" >
-                <tbody id="location_table">
-                    <tr name="location" data-value="ajk" id="ajk">AJ Katzenmaier</tr>
-                    <tr name="location" data-value="ajk" id="ajk">AJ Katzenmaier</tr>
-                    <tr name="location" data-value="ajk" id="ajk">AJ Katzenmaier</tr>
-                    <tr name="location" data-value="ajk" id="ajk">AJ Katzenmaier</tr>
-                </tbody>
-            </table>
--->
-            <input class="radio_input" type="radio" name="location" value="ajk" >AJ Katzenmaier <br>
-            <input class="radio_input" type="radio" name="location" value="gb" >Greenbay <br>
+            <input class="radio_input" type="radio" name="location" value="ajk">AJ Katzenmaier <br>
+            <input class="radio_input" type="radio" name="location" value="gb">Greenbay <br>
             <input class="radio_input" type="radio" name="location" value="hay">HA Yeager <br>
             <input class="radio_input" type="radio" name="location" value="mph">MP Hart <br>
-            <input class="radio_input" type="radio" name="location" value="n" >North <br>
-            <input class="radio_input" type="radio" name="location" value="s" >South <br>
+            <input class="radio_input" type="radio" name="location" value="n">North <br>
+            <input class="radio_input" type="radio" name="location" value="s">South <br>
             
         </div>
     </div>
@@ -228,15 +217,26 @@
                     </table>
         </div>
     </div>
-    <div class ="bigMapBox bigMapBox_landscape" id="#bigMapBox">
-      <div id="mapAddress" class="mapAddress mapAddress_landscape">
-  
-      </div>
-        <!-- container for maps     -->
-      <div  id="mapContainer" class ="mapContainer mapContainer_landscape">
-         
+    <div class ="bigMapBox bigMapBox_landscape">
+
+       <div class ="mapContainer mapContainer_landscape" id="ajk">
+           <iframe class="map map_landscape" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2969.654213557419!2d-87.63123838489942!3d41.90029307922042!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x880fd34e07f6bac3%3A0x68a82e5d59952c86!2s24+W+Walton+St%2C+Chicago%2C+IL+60610%2C+USA!5e0!3m2!1sen!2sde!4v1523354641248"  frameborder="0" style="border:0" ></iframe>
        </div>
-      
+       <div class =" mapContainer mapContainer_landscape" id="gb">
+           <iframe class="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2969.654213557419!2d-87.63123838489942!3d41.90029307922042!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x880fd34e07f6bac3%3A0x68a82e5d59952c86!2s24+W+Walton+St%2C+Chicago%2C+IL+60610%2C+USA!5e0!3m2!1sen!2sde!4v1523354641248"  frameborder="0" style="border:0" allowfullscreen></iframe>
+       </div>
+       <div class =" mapContainer mapContainer_landscape" id="hay">
+           <iframe class="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2969.654213557419!2d-87.63123838489942!3d41.90029307922042!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x880fd34e07f6bac3%3A0x68a82e5d59952c86!2s24+W+Walton+St%2C+Chicago%2C+IL+60610%2C+USA!5e0!3m2!1sen!2sde!4v1523354641248"  frameborder="0" style="border:0" allowfullscreen></iframe>
+       </div>
+       <div class =" mapContainer mapContainer_landscape" id="mph">
+           <iframe class="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2969.654213557419!2d-87.63123838489942!3d41.90029307922042!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x880fd34e07f6bac3%3A0x68a82e5d59952c86!2s24+W+Walton+St%2C+Chicago%2C+IL+60610%2C+USA!5e0!3m2!1sen!2sde!4v1523354641248"  frameborder="0" style="border:0" allowfullscreen></iframe>
+       </div>
+       <div class =" mapContainer mapContainer_landscape" id="n">
+           <iframe class="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2969.654213557419!2d-87.63123838489942!3d41.90029307922042!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x880fd34e07f6bac3%3A0x68a82e5d59952c86!2s24+W+Walton+St%2C+Chicago%2C+IL+60610%2C+USA!5e0!3m2!1sen!2sde!4v1523354641248"  frameborder="0" style="border:0" allowfullscreen></iframe>
+       </div>
+       <div class =" mapContainer mapContainer_landscape" id="s">
+           <iframe class="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2969.654213557419!2d-87.63123838489942!3d41.90029307922042!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x880fd34e07f6bac3%3A0x68a82e5d59952c86!2s24+W+Walton+St%2C+Chicago%2C+IL+60610%2C+USA!5e0!3m2!1sen!2sde!4v1523354641248"  frameborder="0" style="border:0" allowfullscreen></iframe>
+        </div>
     </div>  
     <div class="container footer landscape_footer" id="footer">
        <input type="image" class="icon" src="images/home_icon.png" alt="home_icon">
