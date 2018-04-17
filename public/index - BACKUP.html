@@ -40,7 +40,7 @@
         </div>    
     </div>      
       
-    <div class=" container row buttonContainer buttonContainer_landscape" id="buttonContainer"> <!-- not sure whether to make it a row -->
+    <div class=" container row buttonContainer buttonContainer_landscape" id="buttonContainer">
         <img id  class=" logo_small_landscape" src="images/nysl_logo.png" alt="NYSL logo">
         <input type="button" class="btn btn-info button landscape_button " id="when" value="when" name="when"  >
         <input type="button" class="btn btn-info button landscape_button" id="teams" value="teams" name="teams"  >
@@ -48,34 +48,27 @@
         <input type="button" class="btn btn-info button landscape_button" id="locations" value="where" name="locations"  >
       <!-- when? menu-->
         <div class="menu collapse menu_landscape " id="when_menu" >
-            <input class="radio_input"  type="radio" name="when" value="today">Today <br>
-            <input class="radio_input" type="radio" name="when" value="september">September <br>
-            <input class="radio_input" type="radio" name="when" value="october">October <br>
-            <input class="radio_input" type="radio" name="when" value="november">November <br>
+            <div class="radio_input">Today</div>
+            <div class="radio_input"  name="when" value="september" id="september">September</div>
+            <div class="radio_input"  name="when" value="october" id="october">October </div>
+            <div class="radio_input"  name="when" value="november" id="november">November </div>
         </div>
      <!--   teams menu    -->
         <div class="container menu  teams_menu_landscape collapse" id="teams_menu">
 
-<!--
-            <input class="radio_input" type="radio" name="team" value="u1">U1 <br>
-            <input class="radio_input" type="radio" name="team" value="u2">U2 <br>
-            <input class="radio_input" type="radio" name="team" value="u3">U3 <br>
-            <input class="radio_input" type="radio" name="team" value="u4">U4 <br>
-            <input class="radio_input" type="radio" name="team" value="u5">U5 <br>
-            <input class="radio_input" type="radio" name="team" value="u6">U6 <br>
--->
-
         </div>
-         
+<!--       locations menu  -->
         <div class="menu collapse menu_landscape" id="locations_menu">
-            <input class="radio_input" type="radio" name="location" value="ajk">AJ Katzenmaier <br>
-            <input class="radio_input" type="radio" name="location" value="gb">Greenbay <br>
-            <input class="radio_input" type="radio" name="location" value="hay">HA Yeager <br>
-            <input class="radio_input" type="radio" name="location" value="mph">MP Hart <br>
-            <input class="radio_input" type="radio" name="location" value="n">North <br>
-            <input class="radio_input" type="radio" name="location" value="s">South <br>
+
+            <div class="radio_input"  name="location" id="ajk" >AJ Katzenmaier</div>
+            <div class="radio_input"  name="location" id="gb" >Greenbay </div>
+            <div class="radio_input"  name="location" id="hay">HA Yeager</div>
+            <div class="radio_input"  name="location" id="mph">MP Hart</div>
+            <div class="radio_input"  name="location" id="n" >North</div>
+            <div class="radio_input"  name="location" id="s" >South</div>
             
         </div>
+    
     </div>
    
      
@@ -87,156 +80,30 @@
         <!--  starting page layout  -->
 <!--        <img id="big_logo" src="images/nysl_logo.png" alt="nysl_log">-->
     </div>
-    <div class="container tableContainer tableContainer_landscape" id="tableContainer">
-        <div class="flexContainer">
-            <table class="tableGames">
-                      <thead>
-                          <tr>
-                              <th scope="col">Day</th>
-<!--                              <th scope="col">SEPTEMBER</th>-->
-                              <th scope="col">Teams</th>
-                              <th scope="col">Location</th>
-                              <th scope="col">Times</th>
-                          </tr>
-                      </thead>
-                      <tbody>
-                          <tr>
-                              <td rowspan="2">9/01</td>
-                              <td>U1 vs U4</td>
-                              <td>AJ Katzenmaier</td>
-                              <td>9:30 a.m.</td>
-                          </tr>
-                          <tr>
-                         
-                              <td>U3 vs U2</td>
-                              <td>Greenbay</td>
-                              <td>1:00 p.m.</td>
-                          </tr>
-                          <tr>
-                              <td rowspan="2">9/08</td>
-                              <td>U5 vs U6</td>
-                              <td>Howard A Yeager</td>
-                              <td>9:30 a.m.</td>
-                          </tr>
-                          <tr>
-                              
-                              <td>U6 vs U1</td>
-                              <td>Marjorie P Hart</td>
-                              <td>1:00 p.m.</td>
-                          </tr>
-                          <tr>
-                              <td rowspan="2">9/15</td>
-                              <td>U2 vs U4</td>
-                              <td>North</td>
-                              <td>9:30 a.m.</td>
-                          </tr>
-                          <tr>
-                              
-                              <td>U3 vs U5</td>
-                              <td>AJ Katzenmaier</td>
-                              <td>1:00 p.m.</td>
-                          </tr>
-                          <tr>
-                              <td rowspan="2">9/22</td>
-                              <td>U2 vs U6</td>
-                              <td>South</td>
-                              <td>9:30 a.m.</td>
-                          </tr>
-                          <tr>
-                              
-                              <td>U2 vs U6</td>
-                              <td>Howard A Yaeger</td>
-                              <td>1:00 p.m.</td>
-                          </tr>
-                          <tr>
-                              <td>9/29</td>
-                              <td>U4 vs U5</td>
-                              <td>Greenbay</td>
-                              <td>9:30 a.m.</td>
-                          </tr>
-                    
-              <!-- AT THIS POINT I WOULD BUILD ANOTHER TABLE WITH THE SAME CHARACTERISTICS AS THE PREVIOUS; I DID, IT DOESNT WORK,
-                         THE POSITIONS ARE NOT MATCHING!!! -->
-                          <tr>
-                              <th scope="col">OCTOBER</th>
-                              <th scope="col">Teams</th>
-                              <th scope="col">Location</th>
-                              <th scope="col">Times</th>
-                          </tr>
+<!--    FOLLOWING: TABLE-->
+    <div class="container  tableContainer tableContainer_landscape" id="big_TableContainer">
+        <div class="row">
+            <table class="col-xs-6 table_games" id="table_games">
 
-                          
-                          <tr>
-                              <td rowspan="2">10/06</td>
-                              <td>U2 vs U5</td>
-                              <td>Marjorie P Hart</td>
-                              <td>9:30 a.m.</td>
-                          </tr>
-                          <tr>
-                              
-                              <td>U1 vs U6</td>
-                              <td>South</td>
-                              <td>1:00 p.m.</td>
-                          </tr>
-                          <tr>
-                              <td rowspan="2">10/13</td>
-                              <td>U3 vs U4</td>
-                              <td>Howard A Yeager</td>
-                              <td>9:30 a.m.</td>
-                          </tr>
-                          <tr>
-                              
-                              <td>U5 vs U1</td>
-                              <td>Greenbay</td>
-                              <td>1:00 p.m.</td>
-                          </tr>
-                          <tr>
-                              <td rowspan="2">10/20</td>
-                              <td>U6 vs U3</td>
-                              <td>North</td>
-                              <td>9:30 a.m.</td>
-                          </tr>
-                          <tr>
-                              
-                              <td>U2 vs U4</td>
-                              <td>Marjorie P Hart</td>
-                              <td>1:00 p.m.</td>
-                          </tr>
-                          <tr>
-                              <td rowspan="2">10/27</td>
-                              <td>U3 vs U1</td>
-                              <td>AJ Katzenmaier</td>
-                              <td>9:30 a.m.</td>
-                          </tr>
-                          <tr>
-                              
-                              <td>U5 vs U6</td>
-                              <td>Howard A Yaeger</td>
-                              <td>1:00 p.m.</td>
-                          </tr>
-                      </tbody>
-                    </table>
+
+            </table>
+
+            <div class="col-xs-6 container smallMapBox smallMapBox_landscape" id="smallMapBox">
+               <div id = "small_address" class="row, small_address"></div>
+               <div id ="small_map" class="row small_map"></div>
+            </div>
         </div>
     </div>
-    <div class ="bigMapBox bigMapBox_landscape">
-
-       <div class ="mapContainer mapContainer_landscape" id="ajk">
-           <iframe class="map map_landscape" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2969.654213557419!2d-87.63123838489942!3d41.90029307922042!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x880fd34e07f6bac3%3A0x68a82e5d59952c86!2s24+W+Walton+St%2C+Chicago%2C+IL+60610%2C+USA!5e0!3m2!1sen!2sde!4v1523354641248"  frameborder="0" style="border:0" ></iframe>
+<!--    "BIG" MAP-->
+    <div class ="bigMapBox bigMapBox_landscape" id="#bigMapBox">
+      <div id="mapAddress" class="mapAddress mapAddress_landscape">
+  
+      </div>
+        <!-- container for maps     -->
+      <div id="mapContainer" class ="mapContainer mapContainer_landscape">
+         
        </div>
-       <div class =" mapContainer mapContainer_landscape" id="gb">
-           <iframe class="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2969.654213557419!2d-87.63123838489942!3d41.90029307922042!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x880fd34e07f6bac3%3A0x68a82e5d59952c86!2s24+W+Walton+St%2C+Chicago%2C+IL+60610%2C+USA!5e0!3m2!1sen!2sde!4v1523354641248"  frameborder="0" style="border:0" allowfullscreen></iframe>
-       </div>
-       <div class =" mapContainer mapContainer_landscape" id="hay">
-           <iframe class="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2969.654213557419!2d-87.63123838489942!3d41.90029307922042!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x880fd34e07f6bac3%3A0x68a82e5d59952c86!2s24+W+Walton+St%2C+Chicago%2C+IL+60610%2C+USA!5e0!3m2!1sen!2sde!4v1523354641248"  frameborder="0" style="border:0" allowfullscreen></iframe>
-       </div>
-       <div class =" mapContainer mapContainer_landscape" id="mph">
-           <iframe class="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2969.654213557419!2d-87.63123838489942!3d41.90029307922042!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x880fd34e07f6bac3%3A0x68a82e5d59952c86!2s24+W+Walton+St%2C+Chicago%2C+IL+60610%2C+USA!5e0!3m2!1sen!2sde!4v1523354641248"  frameborder="0" style="border:0" allowfullscreen></iframe>
-       </div>
-       <div class =" mapContainer mapContainer_landscape" id="n">
-           <iframe class="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2969.654213557419!2d-87.63123838489942!3d41.90029307922042!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x880fd34e07f6bac3%3A0x68a82e5d59952c86!2s24+W+Walton+St%2C+Chicago%2C+IL+60610%2C+USA!5e0!3m2!1sen!2sde!4v1523354641248"  frameborder="0" style="border:0" allowfullscreen></iframe>
-       </div>
-       <div class =" mapContainer mapContainer_landscape" id="s">
-           <iframe class="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2969.654213557419!2d-87.63123838489942!3d41.90029307922042!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x880fd34e07f6bac3%3A0x68a82e5d59952c86!2s24+W+Walton+St%2C+Chicago%2C+IL+60610%2C+USA!5e0!3m2!1sen!2sde!4v1523354641248"  frameborder="0" style="border:0" allowfullscreen></iframe>
-        </div>
+      
     </div>  
     <div class="container footer landscape_footer" id="footer">
        <input type="image" class="icon" src="images/home_icon.png" alt="home_icon">

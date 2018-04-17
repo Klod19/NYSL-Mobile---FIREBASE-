@@ -40,7 +40,7 @@
         </div>    
     </div>      
       
-    <div class=" container row buttonContainer buttonContainer_landscape" id="buttonContainer"> <!-- not sure whether to make it a row -->
+    <div class=" container row buttonContainer buttonContainer_landscape" id="buttonContainer">
         <img id  class=" logo_small_landscape" src="images/nysl_logo.png" alt="NYSL logo">
         <input type="button" class="btn btn-info button landscape_button " id="when" value="when" name="when"  >
         <input type="button" class="btn btn-info button landscape_button" id="teams" value="teams" name="teams"  >
@@ -48,45 +48,27 @@
         <input type="button" class="btn btn-info button landscape_button" id="locations" value="where" name="locations"  >
       <!-- when? menu-->
         <div class="menu collapse menu_landscape " id="when_menu" >
-            <input class="radio_input"  type="radio" name="when" value="today" id="today">Today <br>
-            <input class="radio_input" type="radio" name="when" value="september" id="september">September <br>
-            <input class="radio_input" type="radio" name="when" value="october" id="october">October <br>
-            <input class="radio_input" type="radio" name="when" value="november" id="november">November <br>
+            <div class="radio_input menu_entry">Today</div>
+            <div class="radio_input menu_entry"  name="when" id="september">September</div>
+            <div class="radio_input menu_entry"  name="when" id="october">October </div>
+            <div class="radio_input menu_entry"  name="when" id="november">November </div>
         </div>
      <!--   teams menu    -->
         <div class="container menu  teams_menu_landscape collapse" id="teams_menu">
 
-<!--
-            <input class="radio_input" type="radio" name="team" value="u1">U1 <br>
-            <input class="radio_input" type="radio" name="team" value="u2">U2 <br>
-            <input class="radio_input" type="radio" name="team" value="u3">U3 <br>
-            <input class="radio_input" type="radio" name="team" value="u4">U4 <br>
-            <input class="radio_input" type="radio" name="team" value="u5">U5 <br>
-            <input class="radio_input" type="radio" name="team" value="u6">U6 <br>
--->
-
         </div>
-         
+<!--       locations menu  -->
         <div class="menu collapse menu_landscape" id="locations_menu">
-<!--           THE FOLLOWING WONT WORK, NOT SHOWN AS TABLE!!!!-->
-<!--
-            <table class="table table-striped" >
-                <tbody id="location_table">
-                    <tr name="location" data-value="ajk" id="ajk">AJ Katzenmaier</tr>
-                    <tr name="location" data-value="ajk" id="ajk">AJ Katzenmaier</tr>
-                    <tr name="location" data-value="ajk" id="ajk">AJ Katzenmaier</tr>
-                    <tr name="location" data-value="ajk" id="ajk">AJ Katzenmaier</tr>
-                </tbody>
-            </table>
--->
-            <input class="radio_input" type="radio" name="location" value="ajk" >AJ Katzenmaier <br>
-            <input class="radio_input" type="radio" name="location" value="gb" >Greenbay <br>
-            <input class="radio_input" type="radio" name="location" value="hay">HA Yeager <br>
-            <input class="radio_input" type="radio" name="location" value="mph">MP Hart <br>
-            <input class="radio_input" type="radio" name="location" value="n" >North <br>
-            <input class="radio_input" type="radio" name="location" value="s" >South <br>
+
+            <div class="radio_input menu_entry"  name="location" id="ajk" >AJ Katzenmaier</div>
+            <div class="radio_input menu_entry"  name="location" id="gb" >Greenbay </div>
+            <div class="radio_input menu_entry"  name="location" id="hay">HA Yeager</div>
+            <div class="radio_input menu_entry"  name="location" id="mph">MP Hart</div>
+            <div class="radio_input menu_entry"  name="location" id="n" >North</div>
+            <div class="radio_input menu_entry"  name="location" id="s" >South</div>
             
         </div>
+    
     </div>
    
      
@@ -99,11 +81,20 @@
 <!--        <img id="big_logo" src="images/nysl_logo.png" alt="nysl_log">-->
     </div>
 <!--    FOLLOWING: TABLE-->
-    <div class="container tableContainer tableContainer_landscape" id="big_TableContainer">
-        <div class="flexContainer" id="tableContainer">
-            LOLOLOLOLOLOLOLOLOLOLOLOLOLOLOLOL
+    <div class="container  tableContainer tableContainer_landscape" id="big_TableContainer">
+        <div class="row">
+            <table class="col-xs-6 table_games" id="table_games">
+
+
+            </table>
+
+            <div class="col-xs-6 container smallMapBox smallMapBox_landscape" id="smallMapBox">
+               <div id = "small_address" class="row, small_address"></div>
+               <div id ="small_map" class="row small_map"></div>
+            </div>
         </div>
     </div>
+<!--    "BIG" MAP-->
     <div class ="bigMapBox bigMapBox_landscape" id="#bigMapBox">
       <div id="mapAddress" class="mapAddress mapAddress_landscape">
   
@@ -113,7 +104,9 @@
          
        </div>
       
-    </div>  
+    </div>
+<!--    FOOTER  -->
+<!--
     <div class="container footer landscape_footer" id="footer">
        <input type="image" class="icon" src="images/home_icon.png" alt="home_icon">
        <input type="image" class="icon" src="images/calendar_icon.png" alt="calendar_icon">
@@ -121,6 +114,7 @@
        <input type="image" class="icon" src="images/whatsapp_icon.jpg" alt="whatsapp_icon">
        <input type="image" class="icon" src="images/email_icon" alt="email_icon">
     </div>
+-->
 </div>
    
    

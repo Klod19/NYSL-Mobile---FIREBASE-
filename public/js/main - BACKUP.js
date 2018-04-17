@@ -38,19 +38,19 @@ function activateMenu(){
                // try with background color
                 console.log($("#" + id).css("background-color") )
                 //looks like you can compare colors only using rgb values
-                if($("#" + id).css("background-color") == "rgb(4, 57, 73)" && $("#" + id).is("input")){
+                if($("#" + id).css("background-color") == "rgb(38, 154, 188)" && $("#" + id).is("input")){
                     $("#" + id).css("background-color", "rgb(0, 128, 0)")
                     console.log("from blue to green")
                 }
                 else if($("#" + id).css("background-color") == "rgb(0, 128, 0)") {
-                    $("#" + id).css("background-color", "rgb(4, 57 ,73)")
+                    $("#" + id).css("background-color", "rgb(38, 154, 188)")
                     console.log("from green to blue")
                 }
                 else{
                     console.log("???")
                 }
 
-                $("#" + id).siblings(".button").css("background-color", " rgb(4, 57, 73)")
+                $("#" + id).siblings(".button").css("background-color", " rgb(38, 154, 188)")
 
             })
 }
@@ -220,17 +220,20 @@ function showMap(id, array) {//called by showContent; shows map according to its
             var map_src = this.url;
             var map_address = this.address
        
-            if (map_code == id){// WORKS ONLY 6-7 TIMES THEN STOPS WORKING!!!!!
-                var newMap = $("<iframe>").attr({ id : "map_id_" + map_code, "class": "map map_landscape", "data-value": map_code, "frameborder": "0", "src" : map_src });
+            if (map_code == id){/* CSS for attr border to "map map_landscape: 210, 460*/
+                var newMap = $("<iframe>").attr({ id : map_code, "class": "map map_landscape", "frameborder": "0", "src" : map_src });
+                $(".map").hide();
                 $("#mapAddress").html(map_address)
+                $(".map").show();
                 $("#mapContainer").append(newMap);
                 console.log(map_code);
                 console.log(map_src);
                 console.log(map_address);
             }
-            if (map_code != id){
-               $("#map_id_" + map_code).hide();
-            }
+//            if (map_code != id){
+////               $("#" + map_code).hide();
+//               $(".map").hide();
+//            }
         })
     
 }

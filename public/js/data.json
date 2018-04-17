@@ -1,5 +1,6 @@
 {
-	"Teams": [{
+	"Teams": [
+        {
 			"name": "TrollsLOL",
 			"logo": "images/team_logos/troll.jpg",
 			"motto": "you mad? LOLZ"
@@ -17,11 +18,11 @@
 		{
 			"name": "Metalheads",
 			"logo": "images/team_logos/metalheads.jpeg",
-			"motto": "RRRRRRRÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖAAAAAAAAARRR!!!"
+			"motto": "RRRRRRRÖÖÖÖAAAARRR!!!"
 		},
 		{
 			"name": "Carcosa Soccer Team",
-			"logo": "images/team_logos/carcosa.png",
+			"logo": "images/team_logos/carcosa6.png",
 			"motto": "Time is a flat circle"
 		},
 		{
@@ -30,7 +31,8 @@
 			"motto": "damn, we're out of beer"
 		}
 	],
-	"Locations": [{
+	"Locations": [
+        {
 			"code": "ajk",
 			"name": "AJ Katzenmaier",
 			"address": "AJ Katzenmaier Stadium 24 W. Walton St., Chicago, IL 60610",
@@ -70,191 +72,239 @@
 	],
 	"Matches": [
 
-		{
-			"september": {
-				"game0": {
+		
+			
+				 {
 					"name": "Team 1 vs Team 4",
 					"gameId": "0",
 					"t1Name": "TrollsLOL",
 					"t1Logo": "images/team_logos/troll_face.png",
-					"t4Name": "Metalheads",
-					"t4Logo": "images/team_logos/metalheads.jpeg",
+					"t2Name": "Metalheads",
+					"t2Logo": "images/team_logos/metalheads.jpeg",
 					"location_code": "ajk",
+                     "address": "AJ Katzenmaier Stadium 24 W. Walton St., Chicago, IL 60610",
+			         "url": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2969.654213557419!2d-87.63123838489942!3d41.90029307922042!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x880fd34e07f6bac3%3A0x68a82e5d59952c86!2s24+W+Walton+St%2C+Chicago%2C+IL+60610%2C+USA!5e0!3m2!1sen!2sde!4v1523354641248",
+                    "month": "september",
 					"date": "01/09",
 					"time": "9.30 a.m."
 				},
-				"game1": {
+				{
 					"name": "Team 3 vs Team 2",
 					"gameId": "1",
-					"t3Name": "We don't like soccer",
-					"t3Logo": "images/team_logos/soccer_forbidden.jpg",
+					"t1Name": "We don't like soccer",
+					"t1Logo": "images/team_logos/soccer_forbidden.jpg",
 					"t2Name": "R'lyeh Order of Soccer",
 					"t2Logo": "images/team_logos/cthulhu.jpg",
 					"location_code": "gb",
+                    "address": "Greenbay Stadium 1734, N. Orleans St., Chicago, IL 60614",
+			         "url": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2969.0258285480745!2d-87.64002868489897!3d41.91380347921943!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x880fd34073f306a3%3A0x9e1726bbf8f23f0e!2s1734+N+Orleans+St%2C+Chicago%2C+IL+60614%2C+USA!5e0!3m2!1sen!2sde!4v1523371884523",
+                    "month": "september",
 					"date": "01/09",
 					"time": "1.00 pm"
 				},
-				"game2": {
+				{
 					"name": "Team 5 vs Team 6",
 					"gameId": "2",
-					"t5Name": "Carcosa Soccer Team",
-					"t5Logo": "images/team_logos/carcosa.png",
-					"t6Name": "Charles Bukowsky Federation",
-					"t6Logo": "images/team_logos/beer.jpg",
+					"t1Name": "Carcosa Soccer Team",
+					"t1Logo": "images/team_logos/carcosa6.png",
+					"t2Name": "Charles Bukowsky Federation",
+					"t2Logo": "images/team_logos/beer1.png",
 					"location_code": "hay",
+                    "address": "Howard A Yeager Stadium, 2245 N. Southport Ave, Chicago, IL 60614",
+			        "url": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2968.585683085617!2d-87.66511458489856!3d41.92326457921868!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x880fd2e37f9b8d2d%3A0x62ad8b907dd755d6!2s2245+N+Southport+Ave%2C+Chicago%2C+IL+60614%2C+USA!5e0!3m2!1sen!2sde!4v1519138396269",
+                    "month": "september",
 					"date": "08/09",
 					"time": "9.30 am"
 				},
-				"game3": {
+				{
 					"name": "Team 6 vs Team 1",
 					"gameId": "3",
-					"t6Name": "Charles Bukowsky Federation",
-					"t6Logo": "images/team_logos/beer.jpg",
-					"t1Name": "TrollsLOL",
-					"t1Logo": "images/team_logos/troll_face.png",
+					"t1Name": "Charles Bukowsky Federation",
+					"t1Logo": "images/team_logos/beer1.png",
+					"t2Name": "TrollsLOL",
+					"t2Logo": "images/team_logos/troll_face.png",
 					"location_code": "mph",
+                    "address": "Marjorie P Hart Stadium, 2625 N. Orchard St., Chicago, IL 60614",
+			         "url": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2968.291821595265!2d-87.64808498489832!3d41.92958027921817!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x880fd30f2630e551%3A0x3e719e44a5cef714!2s2625+N+Orchard+St%2C+Chicago%2C+IL+60614%2C+USA!5e0!3m2!1sen!2sde!4v1519138573045",
+                    "month": "september",
 					"date": "08/09",
 					"time": "1.00 pm"
 				},
-				"game4": {
+				{
 					"name": "Team 2 vs Team 4",
 					"gameId": "4",
-					"t2Name": "R'lyeh Order of Soccer",
-					"t2Logo": "images/team_logos/cthulhu.jpg",
-					"t4Name": "Metalheads",
-					"t4Logo": "images/team_logos/metalheads.jpeg",
+					"t1Name": "R'lyeh Order of Soccer",
+					"t1Logo": "images/team_logos/cthulhu.jpg",
+					"t2Name": "Metalheads",
+					"t2Logo": "images/team_logos/metalheads.jpeg",
 					"location_code": "n",
+                    "address": "King in the North Stadium, 1409 N. Ogden Ave., Chicago, IL 60610",
+			         "url": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2969.3364882315836!2d-87.64835588489916!3d41.907124679219926!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x880fd33af13a8945%3A0xb6ad1ec2b6f379ba!2s1409+N+Ogden+Ave%2C+Chicago%2C+IL+60610%2C+USA!5e0!3m2!1sen!2sde!4v1519138638222",
+                    "month": "september",
 					"date": "15/09",
 					"time": "9.30 am"
 				},
-				"game5": {
+				{
 					"name": "Team 3 vs Team 5",
 					"gameId": "5",
-					"t3Name": "We don't like soccer",
-					"t3Logo": "images/team_logos/soccer_forbidden.jpg",
-					"t5Name": "Carcosa Soccer Team",
-					"t5Logo": "images/team_logos/carcosa.png",
+					"t1Name": "We don't like soccer",
+					"t1Logo": "images/team_logos/soccer_forbidden.jpg",
+					"t2Name": "Carcosa Soccer Team",
+					"t2Logo": "images/team_logos/carcosa6.png",
 					"location_code": "ajk",
+                    "address": "AJ Katzenmaier Stadium 24 W. Walton St., Chicago, IL 60610",
+			         "url": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2969.654213557419!2d-87.63123838489942!3d41.90029307922042!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x880fd34e07f6bac3%3A0x68a82e5d59952c86!2s24+W+Walton+St%2C+Chicago%2C+IL+60610%2C+USA!5e0!3m2!1sen!2sde!4v1523354641248",
+                    "month": "september",
 					"date": "15/09",
 					"time": "1.00 pm"
 				},
-				"game6": {
+				{
 					"name": "Team 2 vs Team 6",
 					"gameId": "6",
-					"t2Name": "R'lyeh Order of Soccer",
-					"t2Logo": "images/team_logos/cthulhu.jpg",
-					"t6Name": "Charles Bukowsky Federation",
-					"t6Logo": "images/team_logos/beer.jpg",
+					"t1Name": "R'lyeh Order of Soccer",
+					"t1Logo": "images/team_logos/cthulhu.jpg",
+					"t2Name": "Charles Bukowsky Federation",
+					"t2Logo": "images/team_logos/beer1.png",
 					"location_code": "s",
+                    "address": "Southern Stadium, 2101 N. Fremont St.., Chicago, IL 60614",
+			         "url": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2968.748020309144!2d-87.65355788489867!3d41.919775279218925!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x880fd3196fb41dc7%3A0x970be7f7d6336df5!2s2101+N+Fremont+St%2C+Chicago%2C+IL+60614%2C+USA!5e0!3m2!1sen!2sde!4v1519138681910",
+                    "month": "september",
 					"date": "22/09",
 					"time": "9.30 am"
 				},
-				"game7": {
+				{
 					"name": "Team 4 vs Team 5",
 					"gameId": "7",
-					"t4Name": "Metalheads",
-					"t4Logo": "images/team_logos/metalheads.jpeg",
-					"t5Name": "Carcosa Soccer Team",
-					"t5Logo": "images/team_logos/carcosa.png",
+					"t1Name": "Metalheads",
+					"t1Logo": "images/team_logos/metalheads.jpeg",
+					"t2Name": "Carcosa Soccer Team",
+					"t2Logo": "images/team_logos/carcosa6.png",
 					"location_code": "hay",
+                    "address": "Howard A Yeager Stadium, 2245 N. Southport Ave, Chicago, IL 60614",
+			        "url": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2968.585683085617!2d-87.66511458489856!3d41.92326457921868!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x880fd2e37f9b8d2d%3A0x62ad8b907dd755d6!2s2245+N+Southport+Ave%2C+Chicago%2C+IL+60614%2C+USA!5e0!3m2!1sen!2sde!4v1519138396269",
+                    "month": "september",
 					"date": "22/09",
 					"time": "1.00 pm"
-				}
+				},
 
-			},
-			"october": {
-				"game8": {
+			
+			
+				{
 					"name": "Team 2 vs Team 5",
 					"gameId": "8",
-					"t2Name": "R'lyeh Order of Soccer",
-					"t2Logo": "images/team_logos/cthulhu.jpg",
-					"t5Name": "Carcosa Soccer Team",
-					"t5Logo": "images/team_logos/carcosa.png",
+					"t1Name": "R'lyeh Order of Soccer",
+					"t1Logo": "images/team_logos/cthulhu.jpg",
+					"t2Name": "Carcosa Soccer Team",
+					"t2Logo": "images/team_logos/carcosa6.png",
 					"location_code": "mph",
+                    "address": "Marjorie P Hart Stadium, 2625 N. Orchard St., Chicago, IL 60614",
+			         "url": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2968.291821595265!2d-87.64808498489832!3d41.92958027921817!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x880fd30f2630e551%3A0x3e719e44a5cef714!2s2625+N+Orchard+St%2C+Chicago%2C+IL+60614%2C+USA!5e0!3m2!1sen!2sde!4v1519138573045",
+                    "month": "october",
 					"date": "06/10",
 					"time": "9.30 am"
 				},
-				"game9": {
+				{
 					"name": "Team 1 vs Team 6",
 					"gameId": "9",
 					"t1Name": "TrollsLOL",
 					"t1Logo": "images/team_logos/troll_face.png",
-					"t6Name": "Charles Bukowsky Federation",
-					"t6Logo": "images/team_logos/beer.jpg",
+					"t2Name": "Charles Bukowsky Federation",
+					"t2Logo": "images/team_logos/beer1.png",
 					"location_code": "s",
+                     "address": "Southern Stadium, 2101 N. Fremont St.., Chicago, IL 60614",
+			         "url": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2968.748020309144!2d-87.65355788489867!3d41.919775279218925!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x880fd3196fb41dc7%3A0x970be7f7d6336df5!2s2101+N+Fremont+St%2C+Chicago%2C+IL+60614%2C+USA!5e0!3m2!1sen!2sde!4v1519138681910",
+                    "month": "october",
 					"date": "06/10",
 					"time": "1.00 pm"
 				},
-				"game10": {
+				{
 					"name": "Team 3 vs Team 4",
 					"gameId": "10",
-					"t3Name": "We don't like soccer",
-					"t3Logo": "images/team_logos/soccer_forbidden.jpg",
-					"t4Name": "Metalheads",
-					"t4Logo": "images/team_logos/metalheads.jpeg",
+					"t1Name": "We don't like soccer",
+					"t1Logo": "images/team_logos/soccer_forbidden.jpg",
+					"t2Name": "Metalheads",
+					"t2Logo": "images/team_logos/metalheads.jpeg",
 					"location_code": "hay",
+                    "address": "Howard A Yeager Stadium, 2245 N. Southport Ave, Chicago, IL 60614",
+			         "url": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2968.585683085617!2d-87.66511458489856!3d41.92326457921868!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x880fd2e37f9b8d2d%3A0x62ad8b907dd755d6!2s2245+N+Southport+Ave%2C+Chicago%2C+IL+60614%2C+USA!5e0!3m2!1sen!2sde!4v1519138396269",
+                    "month": "october",
 					"date": "13/10",
 					"time": "9.30 am"
 				},
-				"game11": {
+				{
 					"name": "Team 5 vs Team 1",
 					"gameId": "11",
-					"t5Name": "Carcosa Soccer Team",
-					"t5Logo": "images/team_logos/carcosa.png",
-					"t1Name": "TrollsLOL",
-					"t1Logo": "images/team_logos/troll_face.png",
+					"t1Name": "Carcosa Soccer Team",
+					"t1Logo": "images/team_logos/carcosa6.png",
+					"t2Name": "TrollsLOL",
+					"t2Logo": "images/team_logos/troll_face.png",
 					"location_code": "gb",
+                    "address": "Greenbay Stadium 1734, N. Orleans St., Chicago, IL 60614",
+			         "url": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2969.0258285480745!2d-87.64002868489897!3d41.91380347921943!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x880fd34073f306a3%3A0x9e1726bbf8f23f0e!2s1734+N+Orleans+St%2C+Chicago%2C+IL+60614%2C+USA!5e0!3m2!1sen!2sde!4v1523371884523",
+                    "month": "october",
 					"date": "13/10",
 					"time": "1.00 pm"
 				},
-				"game12": {
+                {
 					"name": "Team 6 vs Team 3",
 					"gameId": "12",
-					"t6Name": "Charles Bukowsky Federation",
-					"t6Logo": "images/team_logos/beer.jpg",
-					"t3Name": "We don't like soccer",
-					"t3Logo": "images/team_logos/soccer_forbidden.jpg",
+					"t1Name": "Charles Bukowsky Federation",
+					"t1Logo": "images/team_logos/beer1.png",
+					"t2Name": "We don't like soccer",
+					"t2Logo": "images/team_logos/soccer_forbidden.jpg",
 					"location_code": "n",
+                    "address": "King in the North Stadium, 1409 N. Ogden Ave., Chicago, IL 60610",
+			         "url": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2969.3364882315836!2d-87.64835588489916!3d41.907124679219926!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x880fd33af13a8945%3A0xb6ad1ec2b6f379ba!2s1409+N+Ogden+Ave%2C+Chicago%2C+IL+60610%2C+USA!5e0!3m2!1sen!2sde!4v1519138638222",
+                    "month": "october",
 					"date": "20/10",
 					"time": "9.30 am"
 				},
-				"game13": {
+				{
 					"name": "Team 2 vs Team 4",
 					"gameId": "13",
-					"t2Name": "R'lyeh Order of Soccer",
-					"t2Logo": "images/team_logos/cthulhu.jpg",
-					"t4Name": "Metalheads",
-					"t4Logo": "images/team_logos/metalheads.jpeg",
+					"t1Name": "R'lyeh Order of Soccer",
+					"t1Logo": "images/team_logos/cthulhu.jpg",
+					"t2Name": "Metalheads",
+					"t2Logo": "images/team_logos/metalheads.jpeg",
 					"location_code": "mph",
+                    "address": "Marjorie P Hart Stadium, 2625 N. Orchard St., Chicago, IL 60614",
+			         "url": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2968.291821595265!2d-87.64808498489832!3d41.92958027921817!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x880fd30f2630e551%3A0x3e719e44a5cef714!2s2625+N+Orchard+St%2C+Chicago%2C+IL+60614%2C+USA!5e0!3m2!1sen!2sde!4v1519138573045",
+                    "month": "october",
 					"date": "20/10",
 					"time": "1.00 pm"
 				},
-				"game14": {
+				{
 					"name": "Team 3 vs Team 1",
 					"gameId": "14",
-					"t3Name": "We don't like soccer",
-					"t3Logo": "images/team_logos/soccer_forbidden.jpg",
-					"t1Name": "TrollsLOL",
-					"t1Logo": "images/team_logos/troll_face.png",
+					"t1Name": "We don't like soccer",
+					"t1Logo": "images/team_logos/soccer_forbidden.jpg",
+					"t2Name": "TrollsLOL",
+					"t2Logo": "images/team_logos/troll_face.png",
 					"location_code": "ajk",
+                    "address": "AJ Katzenmaier Stadium 24 W. Walton St., Chicago, IL 60610",
+			        "url": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2969.654213557419!2d-87.63123838489942!3d41.90029307922042!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x880fd34e07f6bac3%3A0x68a82e5d59952c86!2s24+W+Walton+St%2C+Chicago%2C+IL+60610%2C+USA!5e0!3m2!1sen!2sde!4v1523354641248",
+                    "month": "october",
 					"date": "27/10",
 					"time": "9.30 am"
 				},
-				"game15": {
+				{
 					"name": "Team 5 vs Team 6",
 					"gameId": "15",
-					"t5Name": "Carcosa Soccer Team",
-					"t5Logo": "images/team_logos/carcosa.png",
-					"t6Name": "Charles Bukowsky Federation",
-					"t6Logo": "images/team_logos/beer.jpg",
+					"t1Name": "Carcosa Soccer Team",
+					"t1Logo": "images/team_logos/carcosa6.png",
+					"t2Name": "Charles Bukowsky Federation",
+					"t2Logo": "images/team_logos/beer1.png",
 					"location_code": "hay",
+                    "address": "Howard A Yeager Stadium, 2245 N. Southport Ave, Chicago, IL 60614",
+			         "url": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2968.585683085617!2d-87.66511458489856!3d41.92326457921868!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x880fd2e37f9b8d2d%3A0x62ad8b907dd755d6!2s2245+N+Southport+Ave%2C+Chicago%2C+IL+60614%2C+USA!5e0!3m2!1sen!2sde!4v1519138396269",
+                    "month": "october",
 					"date": "27/10",
 					"time": "1.00 pm"
 				}
 
 
-			}
+			
 
-		}
+		
 	]
 }

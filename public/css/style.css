@@ -1,16 +1,16 @@
 html{
-    max-height: 100vh;
-    max-width:100vw;
-/*    overflow-y: hidden;*/
+    height: 100vh;
+    width:100vw;
+    overflow-y: hidden;
 
 }
 
 
 body{
-    max-height:100vh;
-    max-width:100vw;
-    font-size:100%;
+    height:100vh;
     width:100vw;
+    font-size:100%;
+    overflow: visible;
 }
 
 .container-fluid{
@@ -42,15 +42,13 @@ h3{
 #mapContainer{
     display:none;
 }
-/*
 .button{
-    height: 6vh;
-    margin-right:1vw;
-    margin-bottom: 1vh;
-    font-size:1em;
-    border:2px solid green
+    background-color: rgb(4, 57, 73);
 }
-*/
+
+.btn-info:active:hover{/*IF I DONT IMPLEMENT THIS, ON THE FIRST CLICK THE BUTTON WILL BE LIGHT BLUE (bootstrap) */
+    background-color: rgb(4, 57, 73)
+}
 
 .row{
     width:100vw;
@@ -133,7 +131,7 @@ h3{
 }
 
 .tableContainer{
-    width:100vw;
+    width:87vw;
     height: 71vh;
     color:white;
     background-image: url("https://png.pngtree.com/thumb_back/fw800/back_pic/03/94/32/0557e8e8fcbf544.jpg");
@@ -172,6 +170,9 @@ h3{
 }
 */
 
+.menu_entry{
+    border-top:2px solid white
+}
 
 .footer{
     width:100vw;
@@ -193,7 +194,7 @@ input{
 }
 
 table{
-    font-size:80%;
+/*    font-size:80%;*/
     margin-bottom: 10px;
 }
 
@@ -208,7 +209,9 @@ td:first-child { width: 1% }
 }
 /* TEAM GRID CLASSES:*/
 .teamGrid{
-    width:100vw;
+    width:87vw;
+    
+ 
 }
 
 .logo_col{
@@ -228,13 +231,35 @@ td:first-child { width: 1% }
     font-size:65% !important
 }
 
+a{
+    color:aquamarine;
+    text-decoration: none
+}
+
+a:visited{
+    color:aquamarine;
+    text-decoration: none;
+}
+
+a:click{
+    text-decoration: none;
+}
+
+a:active{
+    text-decoration: none
+}
+
+a:link{
+    text-decoration: none;
+}
+
 
 /* MEDIA QUERY EXPERIMENT*/
 /*PORTRAIT, ALL MODELS*/
 @media  screen  and  (min-device-width: 320px) and (max-device-width: 414px) and (orientation: portrait){
     .titleContainer{
         height:11vh;
-        background-color:firebrick;
+        background-color:rgba (0, 0, 0, 0.9);
         color:white;
         width:100vw;
         font-size:3em;
@@ -309,8 +334,73 @@ td:first-child { width: 1% }
         height: 71vh;
         border:0;
         }
-
+    /*NOW the portrait team buttons*/
+    .table_games{
+/*
+        width:170% !important;
+        height:13vh;
+        color:black;
+*/
+        position: relative
+    }
+    
+    .game_element{
+        width:170% !important;
+        height:13vh;
+        color:black;
+    }
+    .vs_span{
+        margin-left:10px;
+/*        margin-right:10px;*/
+    }
+    
+    .team_logo{
+        margin-left:10px;
+    }
+    
+    
+    .time_span{
+    margin-right: 20px;   
+    }
+    
+    .smallMapBox{
+        z-index:10;
+        width:170%;
+        height:70vh;
+        position: absolute;
+        top: 20vh;
+        left: 0;
+        overflow-y: hidden;
+        
+    }
+    
+    .small_address{
+        width:180%;
+        height:15vh;
+        font-size:65%;
+        text-align: center;
+        border-bottom: 2px solid white;
+        display: none
+        
+            
+    }
+    
+    .small_map{
+        width:180%;
+        height:70vh;
+        display:none
+    }
+    
+    .small_map_img{
+        width:180%;
+        height:70vh;
+        border:0;
+    }
+    
+  
 }
+
+
 
 /*iphone 5*/
 @media only screen  and  (min-device-width: 320px) and (max-device-width: 568px) and (orientation: landscape){
@@ -378,7 +468,7 @@ td:first-child { width: 1% }
         min-height: 100vh !important;
         background-color:rgba(128,128,128,0.5);
         border: 1px solid black;
-    /*    font-size:110%;*/
+/*        font-size:110%;*/
         font-size:150%;
         padding:0px !important;
 
@@ -396,6 +486,7 @@ td:first-child { width: 1% }
     
     .menu_landscape{
          font-size:2em;
+         width:87vw;
          left:13vw;
          top:0px;
          
@@ -403,12 +494,15 @@ td:first-child { width: 1% }
     }
     
     .teams_menu_landscape{
+         padding-top:5px;
+         padding-bottom: 5px;
          font-size:2em;
          left:13vw;
          top:0px;
-         width:100vw;
-         height :100vw;
-         overflow:scroll !important;
+         width:87vw;
+         height :100vh;
+         overflow-y:auto !important;
+         overflow-x:hidden;
 
 
     }
@@ -452,12 +546,13 @@ td:first-child { width: 1% }
  
     .tableContainer_landscape{
         height: 100vh;
+        width: 87vw;
         margin-left:13vw;
         color:white;
         background-image: url("https://png.pngtree.com/thumb_back/fw800/back_pic/03/94/32/0557e8e8fcbf544.jpg");
         display:none;
         font-size:2em;
-/*        overflow:scroll;*/
+/*        overflow-x:hidden*/
     }
     .flexContainer{
         width:87vw;
@@ -498,31 +593,100 @@ td:first-child { width: 1% }
     }
     
     
-.teamGrid{
-    width:44vw;
-}
+    .teamGrid{
+        width:87vw;
+        padding-top:20px;
+        border-top: 2px solid white;
+    }
 
-.logo_col{
-    width:15vw;
-    margin-right:0px !important
-}
+    .logo_col{
+        width:15%;
+        margin-right:0px !important
+    }
 
-.words_col{
-    width:29vw;
-}
+    .words_col{
+        width:85%
+    }
 
-.team_name{
-    font-size: 85% !important;
-}
+    .team_name{
+        font-size: 85% !important;
+        margin-bottom:0px !important;
+    }
 
-.team_motto{
-    font-size:65% !important
-}
+    .team_motto{
+        font-size:65% !important;
+        font-style: italic;
+    }
   
+    .game_element{
+        width:38vw;
+        color:black;
+/*        background-color: greenyellow;*/
+        }
+    tr{
+        max-width:38vw;
+    }
+    
+    .table_games{
+        width:38vw;
+
+    }
+    
+    .hidden_info_div{
+        width:38vw;
+        height:10vh;
+    }
+    
+    .vs_span{
+        margin-left:5px;
+        margin-right:5px;
+    }
+    
+    .date_span{
+        margin-right:10px;
+    }
+    
+    .time_span{
+        margin-right: 20px;;
+    }
+    
+    .smallMapBox_landscape{
+        width:47vw;
+        height:100vh;
+        margin-left:2px;
+/*        overflow-x:hidden;*/
+        /* THE FOLLOWING IS TO MAKE THE MAP FIXED, AS THE DIV ON ITS LEFT IS SCROLLED*/
+        position: fixed;
+        top: 0;
+        left:53vw;
+
+    }
+    
+    .small_address{
+        width:47vw;
+        height:15vh;
+        font-size:85%;
+        text-align: center;
+        border-bottom: 2px solid white;
+        display: none
+        
+            
+    }
+    
+    .small_map{
+        width:47vw;
+        height:85vh;
+        display:none
+    }
+    
+    .small_map_img{
+        width:47vw;
+        height:85vh;
+        border:0;
+    }
     
     
-    
-/*for iphone X; some features corrected (like the logo position*/
+/*for iphone X; some features corrected (like the logo position)*/
 
 /* it doesn't work !
  
