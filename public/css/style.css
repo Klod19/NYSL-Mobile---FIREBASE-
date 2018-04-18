@@ -995,8 +995,9 @@ a:link{
 .advice{
     position:absolute;
     left:200px;
-    height: 400px;
-    width: 400px;
+    top:20px;
+    height: 50vw;
+    width: 50vw;
     overflow: scroll;
     margin-bottom: 20px;
     display: flex;
