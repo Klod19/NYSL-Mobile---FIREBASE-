@@ -45,20 +45,21 @@
         <input type="button" class="btn btn-info button landscape_button " id="when" value="when" name="when"  >
         <input type="button" class="btn btn-info button landscape_button" id="teams" value="teams" name="teams"  >
 <!--        <input type="button" class="btn btn-info button landscape_button" id="games" value="games" name="games"  >-->
-        <input type="button" class="btn btn-info button landscape_button" id="locations" value="where" name="locations"  >
+        <input type="button" class="btn btn-info button landscape_button" id="locations" value="where" name="locations">
+        <input type="button" class="btn btn-info button landscape_button" id="chat" value="chat" name="chat">
       <!-- when? menu-->
-        <div class="menu collapse menu_landscape " id="when_menu" >
+        <div class="menu collapse menu_landscape toggler_class " id="when_menu" >
 <!--            <div class="radio_input menu_entry">Today</div>-->
             <div class="radio_input menu_entry"  name="when" id="september">September</div>
             <div class="radio_input menu_entry"  name="when" id="october">October </div>
 <!--            <div class="radio_input menu_entry"  name="when" id="november">November </div>-->
         </div>
      <!--   teams menu    -->
-        <div class="container menu  teams_menu_landscape collapse" id="teams_menu">
+        <div class="container  teams_menu  teams_menu_landscape collapse toggler_class" id="teams_menu">
 
         </div>
 <!--       locations menu  -->
-        <div class="menu collapse menu_landscape" id="locations_menu">
+        <div class="menu collapse menu_landscape toggler_class" id="locations_menu">
 
             <div class="radio_input menu_entry"  name="location" id="ajk" >AJ Katzenmaier</div>
             <div class="radio_input menu_entry"  name="location" id="gb" >Greenbay </div>
@@ -114,12 +115,43 @@
        <input type="image" class="icon" src="images/whatsapp_icon.jpg" alt="whatsapp_icon">
        <input type="image" class="icon" src="images/email_icon" alt="email_icon">
     </div>
--->
+    -->
+    <div class="chatBox" id="chatBox">
+          <div class="chat">
+             <div class="advice">
+              You must to be logged
+              <button id="login" class="button is-info">Login!</button>      
+            </div> 
+            <div id="posts" class="box">
+              Loading posts...
+            </div>
+
+            <div class="inputs">
+              <input id="textInput" class="input" type="text" placeholder="Your message...">
+              <button id="create-post" class="button is-primary">Send</button>
+            </div>
+          </div>
+    </div>
 </div>
    
    
    
-   
+<!--  CODE IMPORTED FOR THE CHAT  -->
+  <script src="https://www.gstatic.com/firebasejs/4.8.1/firebase.js"></script>
+  <script>
+      
+    // Initialize Firebase
+    var config = {
+      apiKey: "AIzaSyDO1Ja78B7rVR28KJXb2n92RZC05HhgRkY",
+      authDomain: "chat-test-a7e2c.firebaseapp.com",
+      databaseURL: "https://chat-test-a7e2c.firebaseio.com",
+      projectId: "chat-test-a7e2c",
+      storageBucket: "",
+      messagingSenderId: "598225452861"
+    };
+    firebase.initializeApp(config);
+  </script>
+<!--  END OF CHAT CODE -->
     <!-- BOOTSTRAP jQuery Library-->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <!--    -->
