@@ -45,8 +45,13 @@ body{
     width: 100vw;
     overflow: scroll;
     margin-bottom: 0px;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
 /*    background:url(https://png.pngtree.com/thumb_back/fw800/back_pic/03/94/32/0557e8e8fcbf544.jpg);*/
 }
 
@@ -57,10 +62,19 @@ body{
     width: 400px;
     overflow: scroll;
     margin-bottom: 20px;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     background-color: grey;
     color: white;
     opacity: .7;
@@ -81,6 +95,8 @@ body{
 }
 
 .inputs{
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
 }
 .notification:not(:last-child){
@@ -90,7 +106,8 @@ body{
 .notification.is-info{
     text-align: right;
     max-width: 100%;
-    align-self: flex-end;
+    -ms-flex-item-align: end;
+        align-self: flex-end;
     border-radius: 20px;
     background-color:green;
     font-size:2em !important;
@@ -103,7 +120,8 @@ body{
 .notification.is-primary{
     text-align: left;
     max-width: 80%;
-    align-self: flex-start;
+    -ms-flex-item-align: start;
+        align-self: flex-start;
     border-radius: 20px;
     background-color:blue;
     font-size:2em !important;
@@ -987,8 +1005,13 @@ a:link{
     height:90vh;
     overflow: scroll;
     margin-bottom: 0px;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
 /*    background:url(https://png.pngtree.com/thumb_back/fw800/back_pic/03/94/32/0557e8e8fcbf544.jpg);*/
 }
 
@@ -1000,10 +1023,19 @@ a:link{
     width: 50vw;
     overflow: scroll;
     margin-bottom: 20px;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     background-color: grey;
     color: white;
     opacity: .7;
@@ -1024,6 +1056,8 @@ a:link{
 }
 
 .inputs{
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     height:10vh;
 }
@@ -1034,7 +1068,8 @@ a:link{
 .notification.is-info{
     text-align: right;
     max-width: 100%;
-    align-self: flex-end;
+    -ms-flex-item-align: end;
+        align-self: flex-end;
     border-radius: 20px;
     background-color:green;
     font-size:2em !important;
@@ -1047,7 +1082,8 @@ a:link{
 .notification.is-primary{
     text-align: left;
     max-width: 80%;
-    align-self: flex-start;
+    -ms-flex-item-align: start;
+        align-self: flex-start;
     border-radius: 20px;
     background-color:blue;
     font-size:2em !important;

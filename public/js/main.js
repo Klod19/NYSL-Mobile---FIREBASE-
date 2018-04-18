@@ -74,7 +74,7 @@ function showContent(array1, array2){
                 var gridId = e.target.getAttribute("data-value");
                 console.log("THIS IS the ID: " + id)
                 console.log("THIS IS the gridId: " + gridId)
-                $(".menu").hide(1000);
+                $(".toggler_class").hide(1000);
                 $("#smallMapBox").hide()
                 $("#indexContainer").hide();
                 if ($(this).attr("name") == "when" || $(this).attr("name") == "teams"){ 
@@ -257,7 +257,7 @@ function showMap(id, array) {//called by showContent; shows map according to its
 }
 
 function show_small_map(gameId, address, url){
-    $("#a_id_" + gameId).click(function(){
+    $("#a_id_land" + gameId).click(function(){
         $("#smallMapBox").show()
         var newMap = $("<iframe>").attr({ "class": "small_map_img", "frameborder": "0", "src" : url });
         $(".small_map_img").hide();

@@ -7,10 +7,10 @@ $(document).ready(function(){
    var allTeams = [];
    var allLocations = [];
    var allGames =[];
-    $.getJSON("https://api.myjson.com/bins/6p3mf", function(data){
+    $.getJSON("https://api.myjson.com/bins/b827n", function(data){
         allTeams = data.Teams
         allLocations = data.Locations
-        allGames = data.Matches // CONTROL THIS!!!
+        allGames = data.Matches 
         console.log("allTeams: " + allTeams);
         console.log("allGames: " + allGames);
         console.log("allLocations: " + allLocations);
@@ -31,26 +31,38 @@ function activateMenu(){
                 var id = e.target.id // this stores the id of the target of the clicking action
                 var menu = $("#" + id + "_menu")
                 console.log(id)
-                $(menu).toggle(1000);
+                // the following shows the chat page;
+                if (id == "chat"){
+                    $("#indexContainer").hide();
+                    $("#chatBox").show();
+                    $("#big_TableContainer").hide();
+                    $("#bigMapBox").hide();
+                    $("#mapAddress").hide();
+                    $("#mapContainer").hide();
+                }
+                if (id != "chat"){
+                    $("#chatBox").hide();
+                     $(menu).toggle(1000);
+                }
                 console.log($("#"+id).is("input"))
                 //the following line hides the not-chosen menus
-                $(".menu").not("#" + id + "_menu").hide();
-               // try with background color
+                $(".toggler_class").not("#" + id + "_menu").hide();
+               // the following changes the background color
                 console.log($("#" + id).css("background-color") )
                 //looks like you can compare colors only using rgb values
-                if($("#" + id).css("background-color") == "rgb(38, 154, 188)" && $("#" + id).is("input")){
+                if($("#" + id).css("background-color") == "rgb(4, 57, 73)" && $("#" + id).is("input")){
                     $("#" + id).css("background-color", "rgb(0, 128, 0)")
                     console.log("from blue to green")
                 }
                 else if($("#" + id).css("background-color") == "rgb(0, 128, 0)") {
-                    $("#" + id).css("background-color", "rgb(38, 154, 188)")
+                    $("#" + id).css("background-color", "rgb(4, 57 ,73)")
                     console.log("from green to blue")
                 }
                 else{
                     console.log("???")
                 }
 
-                $("#" + id).siblings(".button").css("background-color", " rgb(38, 154, 188)")
+                $("#" + id).siblings(".button").css("background-color", " rgb(4, 57, 73)")
 
             })
 }
@@ -88,27 +100,22 @@ function makeTable(id, gridId, array1) {
     /* I HAVE TO MANUALLY SHOW/HIDE EVERY CHILDREN OF bigMapBox, WHY?? HIDING THE PARENT SHOULD HIDE THEM TOO!!!*/
         $("#mapContainer").hide();
         $("#mapAddress").hide();
-             //make a table header with the month; if it's in the loop it gets multiplied
-//            var headerRow = $("<tr>").attr({"id":"headerRow_" + gameId})
-//            var th = $("<th>")
-//            $(th).html(month)
-//            $(headerRow).append(th);
-//            $("#table_games").append(headerRow);
+
         array1.forEach(function(object){
             var month = object.month; 
             var name = object.name;
             var team1_name = object.t1Name
             var team2_name = object.t2Name
-//            console.log("team1_name: " + team1_name)
-//            console.log("team2_name: " + team2_name)
-//            console.log(gridId)
             var date = object.date;
             var time = object.time;
             var gameId = object.gameId;
             var url = object.url;
             var address = object.address;
-            var location = $("<a>").attr({"href":"#", "id":"a_id_" + gameId}); 
-            $(location).html("Location");
+            var page_link = object.page_link
+            var location_landscape = $("<a>").attr({"href":"#", "id":"a_id_land" + gameId}); 
+            $(location_landscape).html("Location");
+            var location_portrait = $("<a>").attr({"href":page_link, "id":"a_id_portr" + gameId});
+            $(location_portrait).html("Location")
             var src1 = object.t1Logo;
             var src2 = object.t2Logo;
             
@@ -134,7 +141,14 @@ function makeTable(id, gridId, array1) {
                 var time_span = $("<span>").attr({"class":"time_span"})
                 $(time_span).append(time);
                 var location_span = $("<span>").attr({"class":"location_span"})
-                $(location_span).append(location);
+                // now check the screen orientation, to have 2 different "location" links
+                if (window.matchMedia("(orientation: landscape)").matches){
+                    $(location_span).append(location_landscape);
+                }
+                if (window.matchMedia("(orientation: portrait)").matches){
+                    $(location_span).append(location_portrait);
+                }
+                
                 $(hidden_div).append(time_span);
                 $(hidden_div).append(location_span);
                 $(row).append(hidden_div);
@@ -161,8 +175,15 @@ function makeTable(id, gridId, array1) {
                 var hidden_div = $("<div>").attr({"class":"collapse hidden_info_div", "id":"collapse_" + gameId});
                 var time_span = $("<span>").attr({"class":"time_span"})
                 $(time_span).append(time);
-                var location_span = $("<span>").attr({"class":"location_span"})
-                $(location_span).append(location);
+                var location_span = $("<span>").attr({"class":"location_span"});
+                // now check the screen orientation, to have 2 different "location" links
+                if (window.matchMedia("(orientation: landscape)").matches){
+                    $(location_span).append(location_landscape);
+                }
+                if (window.matchMedia("(orientation: portrait)").matches){
+                    $(location_span).append(location_portrait);
+                }
+            
                 $(hidden_div).append(time_span);
                 $(hidden_div).append(location_span);
                 $(row).append(hidden_div);
@@ -220,20 +241,17 @@ function showMap(id, array) {//called by showContent; shows map according to its
             var map_src = this.url;
             var map_address = this.address
        
-            if (map_code == id){/* CSS for attr border to "map map_landscape: 210, 460*/
-                var newMap = $("<iframe>").attr({ id : map_code, "class": "map map_landscape", "frameborder": "0", "src" : map_src });
-                $(".map").hide();
+            if (map_code == id){// WORKS ONLY 6-7 TIMES THEN STOPS WORKING!!!!!
+                var newMap = $("<iframe>").attr({ id : "map_id_" + map_code, "class": "map map_landscape", "data-value": map_code, "frameborder": "0", "src" : map_src });
                 $("#mapAddress").html(map_address)
-                $(".map").show();
                 $("#mapContainer").append(newMap);
                 console.log(map_code);
                 console.log(map_src);
                 console.log(map_address);
             }
-//            if (map_code != id){
-////               $("#" + map_code).hide();
-//               $(".map").hide();
-//            }
+            if (map_code != id){
+               $("#map_id_" + map_code).hide();
+            }
         })
     
 }
@@ -251,6 +269,112 @@ function show_small_map(gameId, address, url){
     })
 }
 
+// CODE FOR THE CHAT
+document.getElementById("login").addEventListener("click", login);
+document.getElementById("create-post").addEventListener("click", writeNewPost);
+var audio = new Audio('stop1.mp3');
+$(".advice").hide();
+$("#posts").hide();
+
+
+getPosts();
+
+firebase.auth().onAuthStateChanged(function (user) {
+  if (user) {
+    // User is signed in.
+    $(".advice").hide();
+    $("#posts").show();
+
+  } else {
+    $(".advice").show();
+    $("#posts").hide();
+    // No user is signed in.
+  }
+});
+
+// Cosas opcionales a añadir:
+// Comprobar si el usuario está logueado al inicio del script
+// Borrar el texto del input al crear el post
+// Si no hay texto que no deje enviar el post
+
+function login() {
+  var provider = new firebase.auth.GoogleAuthProvider();
+
+  firebase.auth().signInWithPopup(provider)
+    .then(function () {
+      getPosts();
+    })
+    .catch(function () {
+      alert("Something went wrong");
+    });
+}
+
+
+function writeNewPost() {
+
+  if (!$("#textInput").val()) {
+    return
+  }
+
+  var text = document.getElementById("textInput").value;
+  var userName = firebase.auth().currentUser.displayName;
+
+  // A post entry.
+  var postData = {
+    name: userName,
+    body: text
+  };
+
+  // Get a key for a new Post.
+  var newPostKey = firebase.database().ref().child('myMatch').push().key;
+  
+  var updates = {};
+  updates[newPostKey] = postData;
+
+  $("#textInput").val("");
+
+  audio.play();
+
+  return firebase.database().ref().child('myMatch').update(updates);
+}
+
+
+function getPosts() {
+
+  firebase.database().ref('myMatch').on('value', function (data) {
+
+    var logs = document.getElementById("posts");
+    logs.innerHTML = "";
+
+    var posts = data.val();
+
+    var template = "";
+
+    for (var key in posts) {
+      if (posts[key].name == firebase.auth().currentUser.displayName) {
+        template += `
+          <div class="notification is-info">
+            <p class="name">${posts[key].name} says:</p>
+            <p>${posts[key].body}</p>
+          </div>
+        `;
+      } else {
+        template += `
+          <div class="notification is-primary">
+            <p class="name">${posts[key].name} says:</p>
+            <p>${posts[key].body}</p>
+          </div>
+        `;
+      }
+
+    }
+
+    logs.innerHTML = template;
+
+    $(".box").animate({ scrollTop: $(".box").prop("scrollHeight") }, 500);
+  });
+}
+// END OF THE CHAT CODE
 
 
 
