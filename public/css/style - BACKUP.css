@@ -1,6 +1,16 @@
-body{
-    font-size:100%;
+html{
+    height: 100vh;
     width:100vw;
+    overflow-y: hidden;
+
+}
+
+
+body{
+    height:100vh;
+    width:100vw;
+    font-size:100%;
+    overflow: visible;
 }
 
 .container-fluid{
@@ -9,17 +19,11 @@ body{
 
 #mainContainer{
     min-width:100vw !important;
+    height: 100vh !important;
+    background-image: url(https://png.pngtree.com/thumb_back/fw800/back_pic/03/94/32/0557e8e8fcbf544.jpg);
 }
-/*THE PAGE TITLE NEEDS TO BE OPTMIZED ACCORDING TO THE SCREEN; MEDIA QUERY?*/
-#titleContainer{
-    height:11vh;
-    background-color:firebrick;
-    color:white;
-    width:100vw;
-    font-size:3em;
-    text-align: center;
 
-}
+/*THE PAGE TITLE NEEDS TO BE OPTMIZED ACCORDING TO THE SCREEN; MEDIA QUERY?*/
 
 /*
 h3{
@@ -27,37 +31,24 @@ h3{
 }
 */
 
-.buttonContainer{
-    position:relative;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: center;
-    width:100vw;
-    height: 9vh;
-    background-color:aqua;
-    border: 1px solid black;
-/*    font-size:110%;*/
-    font-size:2em;
-    padding:0px !important;
+#bigMapBox{
+    display:none;
 }
 
-.buttonContainer option{
-    font-size:12px !important;
-    width:12px !important;
-    
+#mapAddress{
+    display:none;
 }
 
-/*
-
+#mapContainer{
+    display:none;
+}
 .button{
-    height: 6vh;
-    margin-right:1vw;
-    margin-bottom: 1vh;
-    font-size:1em;
-    border:2px solid green
+    background-color: rgb(4, 57, 73);
 }
-*/
+
+.btn-info:active:hover{/*IF I DONT IMPLEMENT THIS, ON THE FIRST CLICK THE BUTTON WILL BE LIGHT BLUE (bootstrap) */
+    background-color: rgb(4, 57, 73)
+}
 
 .row{
     width:100vw;
@@ -76,10 +67,17 @@ h3{
     height:11vh;
     padding-left:0px;
     padding-right:0px;
+    display:-webkit-box;
+    display:-ms-flexbox;
     display:flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
 /*
     padding-top:2px !important;
     padding-bottom:2px !important;
@@ -88,7 +86,7 @@ h3{
 }
 
 
-#logo_small{
+.logo_small{
 /*
     height:9vh;
     width:16vw;
@@ -128,19 +126,26 @@ h3{
     width:32vw;
 }
 
-#indexContainer{
+.indexContainer{
     width:100vw;
     height: 71vh;
+    display:-webkit-box;
+    display:-ms-flexbox;
     display:flex;
-    flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
 /*    justify-content: center;*/
-    align-items: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     background-image: url("https://png.pngtree.com/thumb_back/fw800/back_pic/03/94/32/0557e8e8fcbf544.jpg");
 /*    display:none;*/
 }
 
-#tableContainer{
-    width:100vw;
+.tableContainer{
+    width:87vw;
     height: 71vh;
     color:white;
     background-image: url("https://png.pngtree.com/thumb_back/fw800/back_pic/03/94/32/0557e8e8fcbf544.jpg");
@@ -156,17 +161,24 @@ h3{
 .menu{
     position:absolute;
     top:8.5vh;
+    left:0px;
 /*    align-self:flex-start;*/
     width:100vw;
-/*    height: 71vh;*/
+    height:900%; /* JUST A TEMPORARY SOLUTION*/
     background-color:rgba(128,128,128, 1.0);
     color:white;
     font-size:2em;
     z-index:100;
     padding-left:10px;
+    overflow-y: scroll !important;
+    overflow-x: hidden;
+
 }
 
-
+.team_logo{
+    border-radius: 50%;
+    width:20vw;
+}
 
 /*
 #when_menu{
@@ -174,14 +186,23 @@ h3{
 }
 */
 
+.menu_entry{
+    border-top:2px solid white
+}
 
-#footer{
+.footer{
     width:100vw;
     height:10vh;
     background-color: gold;
+    display:-webkit-box;
+    display:-ms-flexbox;
     display:flex;
-    justify-content:space-between;
-    align-items: center;
+    -webkit-box-pack:justify;
+        -ms-flex-pack:justify;
+            justify-content:space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
 }
 
 .icon{
@@ -195,44 +216,106 @@ input{
 }
 
 table{
-    font-size:80%;
+/*    font-size:80%;*/
     margin-bottom: 10px;
 }
 
 td{
     border:2px solid white;
+    width:100px !important
 }
 
 td:first-child { width: 1% }
 
-.mapContainer{
-    display:none;
-/*    display: flex;*/
-    align-items: center;
-    justify-content: center;
-    margin:0 !important;
-    padding:0 !important;
-    width:100vw;
-    height:71vh !important;
+
+
+/* TEAM GRID CLASSES:*/
+.teamGrid{
+    width:87vw;
+    
+ 
 }
 
-.map{
-    width:100vw;
-    height: 71vh;
+.logo_col{
+    width:15vw;
+    margin-right:0px !important
+}
+
+.words_col{
+    width:29vw;
+}
+
+.team_name{
+    font-size: 85% !important;
+}
+
+.team_motto{
+    font-size:65% !important
+}
+
+a{
+    color:aquamarine;
+    text-decoration: none
+}
+
+a:visited{
+    color:aquamarine;
+    text-decoration: none;
+}
+
+a:click{
+    text-decoration: none;
+}
+
+a:active{
+    text-decoration: none
+}
+
+a:link{
+    text-decoration: none;
 }
 
 
 /* MEDIA QUERY EXPERIMENT*/
-@media  screen  and (orientation: portrait){
-        .buttonContainer{
+/*PORTRAIT, ALL MODELS*/
+@media  screen  and  (min-device-width: 320px) and (max-device-width: 414px) and (orientation: portrait){
+    .titleContainer{
+        height:11vh;
+        background-color:rgba (0, 0, 0, 0.9);
+        color:white;
+        width:100vw;
+        font-size:3em;
+        text-align: center;
+
+    }
+    
+    .logo_small{
+        /*
+            height:9vh;
+            width:16vw;
+        */
+        max-width:65%;
+    }
+    .logo_small_landscape{
+        display:none;
+    }
+    
+    .buttonContainer{
         position:relative;
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
-        flex-wrap: wrap;
-        justify-content: space-between;
-        align-items: center;
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+        -webkit-box-pack: justify;
+            -ms-flex-pack: justify;
+                justify-content: space-between;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
         width:100vw;
         height: 9vh;
-        background-color:aqua;
+        background-color:rgba(128,128,128,0.5);
         border: 1px solid black;
     /*    font-size:110%;*/
         font-size:2em;
@@ -244,28 +327,199 @@ td:first-child { width: 1% }
         width:12px !important;
 
     }
+    .indexContainer{
+        width:100vw;
+        height: 71vh;
+        display:-webkit-box;
+        display:-ms-flexbox;
+        display:flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
+    /*    justify-content: center;*/
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
+        background-image: url("https://png.pngtree.com/thumb_back/fw800/back_pic/03/94/32/0557e8e8fcbf544.jpg");
+    /*    display:none;*/
+    }
+    
+    .mapAddress{
+        width:100vw;
+        height:12vw;
+        background-color:rgba(128,128,128, 0.5);
+        color:white;
+        text-align: center;
+        font-size:160%;
+    }
+    
+    .mapContainer{
+        display:none;
+    /*    display: flex;*/
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
+        -webkit-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center;
+        margin:0 !important;
+        padding:0 !important;
+        width:100vw;
+        height:71vh !important;
+    }
 
+    .map{
+        width:100vw;
+        height: 71vh;
+        border:0;
+        }
+    /*NOW the portrait team buttons*/
+    .table_games{
+/*
+        width:170% !important;
+        height:13vh;
+        color:black;
+*/
+        position: relative
+    }
+    
+    .game_element{
+        width:170% !important;
+        height:13vh;
+        color:black;
+    }
+    .vs_span{
+        margin-left:10px;
+/*        margin-right:10px;*/
+    }
+    
+    .team_logo{
+        margin-left:10px;
+    }
+    
+    
+    .time_span{
+    margin-right: 20px;   
+    }
+    
+    .smallMapBox{
+        z-index:10;
+        width:170%;
+        height:70vh;
+        position: absolute;
+        top: 20vh;
+        left: 0;
+        overflow-y: hidden;
+        
+    }
+    
+    .small_address{
+        width:180%;
+        height:15vh;
+        font-size:65%;
+        text-align: center;
+        border-bottom: 2px solid white;
+        display: none
+        
+            
+    }
+    /* TEAM MENU PORTRAIT*/
+/*
+    .small_map{
+        width:180%;
+        height:70vh;
+        display:none
+    }
+    
+    .small_map_img{
+        width:180%;
+        height:70vh;
+        border:0;
+    }
+    
+*/
+    .teams_menu{
+        overflow-y: auto !important;
+        overflow-x: hidden;
+    }
+    
+    
+    .teamGrid{
+        width:87vw;
+        padding-top:20px;
+        border-top: 2px solid white;
+    }
+
+    .logo_col{
+        width:20%;
+        margin-right:0px !important
+    }
+
+    .words_col{
+        width:80%
+    }
+
+    .team_name{
+        margin-left:40px !important;
+        width:80% ;
+        font-size: 60% !important;
+        margin-bottom:0px !important;
+    }
+
+    .team_motto{
+        margin-left:40px !important;
+        width:80%;
+        font-size:45% !important;
+        font-style: italic;
+    }
+  
+
+    tr{
+        max-width:38vw;
+    }
+    
+    
+  
 }
 
 
-@media only screen  and  (min-device-width: 320px) and (max-device-width: 812px) and (orientation: landscape) {
-    
-    .buttonContainer_landscape{
-    position:absolute;
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: center;
-    width:20vw;
-    height: 100vh;
-    background-color:aqua;
-    border: 1px solid black;
-/*    font-size:110%;*/
-    font-size:2em;
-    padding:0px !important;
+
+/*iphone 5*/
+@media only screen  and  (min-device-width: 320px) and (max-device-width: 568px) and (orientation: landscape){
+    /*  DIFFERENCES !!!      */
+    .landscape_button{
+        width:11vw !important;
+        margin-top:10px !important;
+        padding:0px !important
     }
-    
+    /*  SAME AS THE OTHERS!!!  */
+    .buttonContainer_landscape{
+        position:absolute;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+        -webkit-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
+        width:13vw;
+        height: 100vh;
+        background-color:rgba(128,128,128,0.5);
+        border: 1px solid black;
+        /*    font-size:110%;*/
+        font-size:150%;
+        padding:0px !important;
+    }
+
     .menu_landscape{
          font-size:1em
     }
@@ -273,8 +527,313 @@ td:first-child { width: 1% }
          display: none;
      }
 
+/*
     .landscape_button{
-/*         width:17vw;*/
+             width:17vw;
          font-size:1em;
     }
+*/
+    .indexContainer_landscape{
+        /*    width:100vw;*/
+        height: 100vh;
+        display:-webkit-box;
+        display:-ms-flexbox;
+        display:flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
+        /*    justify-content: center;*/
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
+        background-image: url("https://png.pngtree.com/thumb_back/fw800/back_pic/03/94/32/0557e8e8fcbf544.jpg");
+        /*    display:none;*/
+    }
+}
+
+    
+    
+/* iphone 6/similar and higher*/
+@media only screen  and  (min-device-width: 640px) and (max-device-width: 823px) and (orientation: landscape) {
+    
+    .buttonContainer_landscape{
+        position:absolute;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+        -webkit-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
+        width:13vw;
+        min-height: 100vh !important;
+        background-color:rgba(128,128,128,0.5);
+        border: 1px solid black;
+/*        font-size:110%;*/
+        font-size:150%;
+        padding:0px !important;
+
+    }
+    .landscape_button{
+        width:11vw !important;
+        margin-top:10px !important
+    }
+    
+    .logo_small_landscape{
+         max-width:90%;
+         position:absolute;
+         top:10px;
+    }
+    
+    .menu_landscape{
+         font-size:2em;
+         width:87vw;
+         left:13vw;
+         top:0px;
+         
+
+    }
+    
+    .teams_menu_landscape{
+         padding-top:5px;
+         padding-bottom: 5px;
+         font-size:2em;
+         left:13vw;
+         top:0px;
+         width:87vw;
+         height :100vh;
+         overflow-y:auto !important;
+         overflow-x:hidden;
+
+
+    }
+    
+
+    #flexTeamsContainer{
+        display:-webkit-box;
+        display:-ms-flexbox;
+        display:flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
+    }
+    
+    .team_logo_landscape{
+        width:10vw;
+    }
+    
+    .landscape_title {
+         display: none;
+     }
+
+/*
+    .landscape_button{
+         width:17vw;
+         font-size:1em;
+    }
+*/
+    .indexContainer_landscape{
+    /*    width:87vw;*/
+        height: 100vh !important;
+        overflow: hidden;
+    /*
+        padding:0px !important;
+        margin: 0px !important;
+    */
+        display:-webkit-box;
+        display:-ms-flexbox;
+        display:flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
+    /*    justify-content: center;*/
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
+        background-image: url("https://png.pngtree.com/thumb_back/fw800/back_pic/03/94/32/0557e8e8fcbf544.jpg");
+    /*    display:none;*/
+   
+    }
+ 
+    .tableContainer_landscape{
+        height: 100vh;
+        width: 87vw;
+        margin-left:13vw;
+        color:white;
+        background-image: url("https://png.pngtree.com/thumb_back/fw800/back_pic/03/94/32/0557e8e8fcbf544.jpg");
+        display:none;
+        font-size:2em;
+        overflow-x:hidden
+    }
+    .flexContainer{
+        width:87vw;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
+        -webkit-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center;
+    }
+    
+    .mapAddress_landscape{
+        margin-left: 13vw;
+        width:87vw;
+        height:10vh;
+        background-color: rgba(128,128,128,0.5);
+        color:white;
+        text-align: center;
+        font-size:185%;
+        padding-top:5px;
+    }
+    .mapContainer_landscape{
+
+    /*    display: flex;*/
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
+        -webkit-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center;
+        margin:0 !important;
+        padding:0 !important;
+        width:87vw;
+        height:90vh !important;
+    }
+    .map_landscape{
+        margin-left:13vw;
+        width:87vw !important;
+        height:90vh !important;
+        border:0;
+    }
+    
+    .landscape_footer{
+        display:none;
+    }
+    
+    /*ELEMENTS OF TEAM MENU*/
+    .teamGrid{
+        width:87vw;
+        padding-top:20px;
+        border-top: 2px solid white;
+    }
+
+    .logo_col{
+        width:15%;
+        margin-right:0px !important
+    }
+
+    .words_col{
+        width:85%
+    }
+
+    .team_name{
+        font-size: 85% !important;
+        margin-bottom:0px !important;
+    }
+
+    .team_motto{
+        font-size:65% !important;
+        font-style: italic;
+    }
+  
+    .game_element{
+        width:38vw;
+        color:black;
+/*        background-color: greenyellow;*/
+        }
+    tr{
+        max-width:38vw;
+    }
+    
+    .table_games{
+        width:38vw;
+
+    }
+    
+    .hidden_info_div{
+        width:38vw;
+        height:10vh;
+    }
+    
+    .vs_span{
+        margin-left:5px;
+        margin-right:5px;
+    }
+    
+    .date_span{
+        margin-right:10px;
+    }
+    
+    .time_span{
+        margin-right: 20px;;
+    }
+    
+    .smallMapBox_landscape{
+        width:47vw;
+        height:100vh;
+        margin-left:2px;
+/*        overflow-x:hidden;*/
+        /* THE FOLLOWING IS TO MAKE THE MAP FIXED, AS THE DIV ON ITS LEFT IS SCROLLED*/
+        position: fixed;
+        top: 0;
+        left:53vw;
+
+    }
+    
+    .small_address{
+        width:47vw;
+        height:15vh;
+        font-size:85%;
+        text-align: center;
+        border-bottom: 2px solid white;
+        display: none
+        
+            
+    }
+    
+    .small_map{
+        width:47vw;
+        height:85vh;
+        display:none
+    }
+    
+    .small_map_img{
+        width:47vw;
+        height:85vh;
+        border:0;
+    }
+    
+    
+/*for iphone X; some features corrected (like the logo position)*/
+
+/* it doesn't work !
+ 
+ @media only screen  and (min-device-width: 375px)  and (max-device-width: 812px)  and (-webkit-min-device-pixel-ratio: 3) and (orientation: landscape){
+        .logo_small_landscape{
+             max-width:95%;
+             position:absolute;
+             top:200px;
+        }
+}
+*/
+  
+    
+    
+       
+
+    
 }

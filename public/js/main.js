@@ -7,10 +7,10 @@ $(document).ready(function(){
    var allTeams = [];
    var allLocations = [];
    var allGames =[];
-    $.getJSON("https://api.myjson.com/bins/6p3mf", function(data){
+    $.getJSON("https://api.myjson.com/bins/b827n", function(data){
         allTeams = data.Teams
         allLocations = data.Locations
-        allGames = data.Matches // CONTROL THIS!!!
+        allGames = data.Matches 
         console.log("allTeams: " + allTeams);
         console.log("allGames: " + allGames);
         console.log("allLocations: " + allLocations);
@@ -107,8 +107,11 @@ function makeTable(id, gridId, array1) {
             var gameId = object.gameId;
             var url = object.url;
             var address = object.address;
-            var location = $("<a>").attr({"href":"#", "id":"a_id_" + gameId}); 
-            $(location).html("Location");
+            var page_link = object.page_link
+            var location_landscape = $("<a>").attr({"href":"#", "id":"a_id_land" + gameId}); 
+            $(location_landscape).html("Location");
+            var location_portrait = $("<a>").attr({"href":page_link, "id":"a_id_portr" + gameId});
+            $(location_portrait).html("Location")
             var src1 = object.t1Logo;
             var src2 = object.t2Logo;
             
@@ -134,7 +137,14 @@ function makeTable(id, gridId, array1) {
                 var time_span = $("<span>").attr({"class":"time_span"})
                 $(time_span).append(time);
                 var location_span = $("<span>").attr({"class":"location_span"})
-                $(location_span).append(location);
+                // now check the screen orientation, to have 2 different "location" links
+                if (window.matchMedia("(orientation: landscape)").matches){
+                    $(location_span).append(location_landscape);
+                }
+                if (window.matchMedia("(orientation: portrait)").matches){
+                    $(location_span).append(location_portrait);
+                }
+                
                 $(hidden_div).append(time_span);
                 $(hidden_div).append(location_span);
                 $(row).append(hidden_div);
@@ -161,8 +171,15 @@ function makeTable(id, gridId, array1) {
                 var hidden_div = $("<div>").attr({"class":"collapse hidden_info_div", "id":"collapse_" + gameId});
                 var time_span = $("<span>").attr({"class":"time_span"})
                 $(time_span).append(time);
-                var location_span = $("<span>").attr({"class":"location_span"})
-                $(location_span).append(location);
+                var location_span = $("<span>").attr({"class":"location_span"});
+                // now check the screen orientation, to have 2 different "location" links
+                if (window.matchMedia("(orientation: landscape)").matches){
+                    $(location_span).append(location_landscape);
+                }
+                if (window.matchMedia("(orientation: portrait)").matches){
+                    $(location_span).append(location_portrait);
+                }
+            
                 $(hidden_div).append(time_span);
                 $(hidden_div).append(location_span);
                 $(row).append(hidden_div);
