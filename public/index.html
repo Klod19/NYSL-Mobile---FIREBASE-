@@ -93,6 +93,19 @@
                <div id = "small_address" class="row, small_address"></div>
                <div id ="small_map" class="row small_map"></div>
             </div>
+            <!-- HERE THE MODAL, FOR PORTRAIT MODE -->
+
+            <!-- The Modal -->
+                <div id="myModal" class="modal">
+
+                      <!-- The Close Button -->
+                      <span class="close">&times;</span>
+
+                      <!-- Modal Content (The Image) -->
+                      
+                      <!-- Modal Caption (Image Text) -->
+                      <div id="caption"></div>
+                </div>
         </div>
     </div>
 <!--    "BIG" MAP-->
@@ -119,7 +132,7 @@
     <div class="chatBox" id="chatBox">
           <div class="chat">
              <div class="advice">
-              You must to be logged
+              You must be logged in
               <button id="login" class="button is-info">Login!</button>      
             </div> 
             <div id="posts" class="box">
@@ -136,21 +149,21 @@
    
    
    
-<!--  CODE IMPORTED FOR THE CHAT  -->
-  <script src="https://www.gstatic.com/firebasejs/4.8.1/firebase.js"></script>
-  <script>
-      
-    // Initialize Firebase
-    var config = {
-      apiKey: "AIzaSyDO1Ja78B7rVR28KJXb2n92RZC05HhgRkY",
-      authDomain: "chat-test-a7e2c.firebaseapp.com",
-      databaseURL: "https://chat-test-a7e2c.firebaseio.com",
-      projectId: "chat-test-a7e2c",
-      storageBucket: "",
-      messagingSenderId: "598225452861"
-    };
-    firebase.initializeApp(config);
-  </script>
+<!--  CODE IMPORTED FROM FIREBASE FOR THE CHAT, TAILORED ON MY APP  -->
+  
+<script src="https://www.gstatic.com/firebasejs/4.12.1/firebase.js"></script>
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyDbRoWbm71DK-k_4y8s1hL4c2BOpWNBHYE",
+    authDomain: "nysl-mobile-application.firebaseapp.com",
+    databaseURL: "https://nysl-mobile-application.firebaseio.com",
+    projectId: "nysl-mobile-application",
+    storageBucket: "nysl-mobile-application.appspot.com",
+    messagingSenderId: "251703235794"
+  };
+  firebase.initializeApp(config);
+</script>
 <!--  END OF CHAT CODE -->
     <!-- BOOTSTRAP jQuery Library-->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>

@@ -114,7 +114,7 @@ function makeTable(id, gridId, array1) {
             var page_link = object.page_link
             var location_landscape = $("<a>").attr({"href":"#", "id":"a_id_land" + gameId}); 
             $(location_landscape).html("Location");
-            var location_portrait = $("<a>").attr({"href":page_link, "id":"a_id_portr" + gameId});
+            var location_portrait = $("<a>").attr({"href":/*page_link*/"#", "id":"a_id_portr" + gameId});
             $(location_portrait).html("Location")
             var src1 = object.t1Logo;
             var src2 = object.t2Logo;
@@ -191,7 +191,8 @@ function makeTable(id, gridId, array1) {
             }
             
             //initialize the function to show the small map on the side
-            show_small_map(gameId, address, url)
+            show_small_map(gameId, address, url);
+            show_modal(gameId, address, url);
 
         })
 }
@@ -376,6 +377,42 @@ function getPosts() {
 }
 // END OF THE CHAT CODE
 
+// CODE FOR THE MODAL IMAGE
+function show_modal(gameId, address, url){
+       var modal = $('#myModal');
+       var modalImg = $("<iframe>").attr({"id":"modal_map_id_" + gameId, "class":"modal-content map", "frameborder": "0", "src" : url, "name":gameId});
+    $("#a_id_portr" + gameId).click(function(){
+        console.log("modal id: " + $("#modal_map_id_" + gameId))
+        var value = $("#modal_map_id_" + gameId).attr("name");//not useful for the function AND undefined
+        // on click, show the modal AND the modalImg; coupled with the "hide" below,prevents same images from stacking 
+        $(modal).show();
+        $(modalImg).show();
+        //THE ID IS UNDEFINED, WHY? ASK!; THE IF STATEMENTS BELOW ARE THEREFORE COMMENTED OUT
+           console.log($("#modal_map_id_" + gameId).attr("id"))
+           console.log("value: " + value);
+           console.log("gameId: " + gameId);
+//        if( value != gameId){
+//            $(modalImg).hide();
+//        }
+//        if (value == gameId){
+//        
+//        }
+        // hide all that hasn't the correct id(prevents stacking); make the iframe and insert it inside the modal; use the address text as a caption   
+        $(".modal-content").not("#modal_map_id_"+ gameId).hide();
+        $(modal).append(modalImg);
+//        $(modalImg).show();
+        var captionText = $("#caption");
+        $(captionText).html(address);
+    })                                  
+    // Get the <span> element that closes the modal
+    var span = document.getElementsByClassName("close")[0];
 
+    // When the user clicks on <span> (x), close the modal AND hide the modalImg
+    span.onclick = function() { 
+       $(modalImg).hide();
+       $(modal).hide();
+    }
+}
+//END OF MODAL CODE
 
 
